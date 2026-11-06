@@ -1,6 +1,6 @@
 ---
 title: Stock One-Pager — สรุปหุ้น 1 หน้า อ่านเข้าใจใน 3 นาที
-owner: [ชื่อเล่น]
+owner: Summ
 status: draft
 updated: 2026-10-31
 ---
