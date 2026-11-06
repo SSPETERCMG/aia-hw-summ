@@ -20,8 +20,15 @@
 
 กรอบ 5 ขั้นตามที่ผู้เรียนสรุปจากหนังสือ *The Little Book of Investing Like the Pros* (Pearl และ Rosenbaum): วิเคราะห์จากล่างขึ้นบน · ผลงานการเงิน · มูลค่า · เหตุการณ์พิเศษ · ความเสี่ยง
 
+5 หน้า: (1) ภาพรวม + ดูตัวธุรกิจ · (2) ผลงานการเงินย้อนหลัง 3 ช่วง + เทียบเพื่อน + คาดไว้ vs จริง · (3) P/E ย้อนหลัง 5 ปี + Forward P/E · (4) DCF 3 กรณี · (5) เหตุการณ์พิเศษ + ตัวเร่งการเติบโต + ความเสี่ยง
+
 [![CPALL 5-step หน้า 1](output/CPALL-5-step-p1.png)](output/CPALL-5-step.pdf)
 [![CPALL 5-step หน้า 2](output/CPALL-5-step-p2.png)](output/CPALL-5-step.pdf)
+[![CPALL 5-step หน้า 3](output/CPALL-5-step-p3.png)](output/CPALL-5-step.pdf)
+[![CPALL 5-step หน้า 4](output/CPALL-5-step-p4.png)](output/CPALL-5-step.pdf)
+[![CPALL 5-step หน้า 5](output/CPALL-5-step-p5.png)](output/CPALL-5-step.pdf)
+
+**วิธีอ่านเลข `[ ]` ในทุกหน้า:** เป็นเลขอ้างอิง ชี้ไปที่แถวใน [`output/data.csv`](output/data.csv) (บอกเอกสาร หน้า/บรรทัด งวด และหน่วยเดิม) · เงินเป็นบาท (1 พันล้าน = 1,000 ล้าน) · ปี 2565–2569 = ค.ศ. 2022–2026 · 6M = 6 เดือนแรก
 
 - ตัวเลขทุกตัวมีที่มาใน [`output/data.csv`](output/data.csv) (ตัวเลขที่คำนวณเองระบุสูตร)
 - มูลค่าในขั้น 3 เป็นสมมติฐานของผู้จัดทำ ไม่ใช่ข้อเท็จจริง ราคาหุ้นมาจาก Yahoo Finance และยังไม่ยืนยันกับ set.or.th

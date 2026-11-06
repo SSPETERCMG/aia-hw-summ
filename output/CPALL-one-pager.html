@@ -65,6 +65,8 @@ h2 span{font-weight:600;font-size:9.5pt;color:var(--mute);margin-left:1.5mm}
 .gloss{display:grid;grid-template-columns:repeat(4,1fr);gap:3mm}
 .gloss div{background:#faf6ea;border-radius:2.5mm;padding:2.4mm 3mm;font-size:9.3pt}
 .gloss b{display:block;font-size:10.5pt;color:var(--accent)}
+.howto{background:#eef4f5;border-radius:2.6mm;padding:2.4mm 3.4mm;font-size:9pt;color:var(--ink);line-height:1.5}
+.howto b{color:var(--accent)}
 .foot{margin-top:auto;border-top:1px solid var(--line);padding-top:2mm;font-size:7.4pt;color:var(--mute);line-height:1.45}
 .foot b{color:var(--ink)}
 </style>
@@ -79,9 +81,9 @@ const D = {
   headline:"เจ้าของร้าน 7-Eleven ในไทย",
   sub:"ขายของใช้ประจำวัน ลูกค้ากลับมาซื้อทุกวัน",
   stats:[
-    {v:"16,284", l:"ร้านทั่วประเทศ", r:"114"},
-    {v:"~1 ล้านล้าน", l:"บาท รายได้ปี 2568", r:"40"},
-    {v:"2.8 หมื่นล้าน", l:"บาท กำไรสุทธิปี 2568", r:"50"}
+    {v:"16,284 ร้าน", l:"7-Eleven ทั่วประเทศ", r:"114"},
+    {v:"~1 ล้านล้านบาท", l:"รายได้ปี 2568", r:"40"},
+    {v:"2.8 หมื่นล้านบาท", l:"กำไรสุทธิปี 2568", r:"50"}
   ],
   revenue:[{p:46,c:"c1"},{p:48,c:"c2"},{p:6,c:"c3"}],
   profit: [{p:61,c:"c1"},{p:28,c:"c2"},{p:11,c:"c3"}],
@@ -91,7 +93,7 @@ const D = {
   lights:[
     {c:"g", n:"ทำกำไร", b:"+11%", t:"กำไรสุทธิเพิ่มจากปีก่อน", r:"50,51"},
     {c:"g", n:"เงินสด", b:"2.3 เท่า", t:"เงินสดที่เข้ามา เทียบกับกำไร", r:"83"},
-    {c:"y", n:"หนี้", b:"3.2 แสนล้าน", t:"หนี้ที่มีดอกเบี้ย ยังไม่เกินเพดานในสัญญา", r:"22,145"},
+    {c:"y", n:"หนี้", b:"3.2 แสนล้านบาท", t:"หนี้ที่มีดอกเบี้ย ยังไม่เกินเพดานในสัญญา", r:"22,145"},
     {c:"g", n:"ปันผล", b:"3.8%", t:"ต่อปี เทียบราคาหุ้น จ่ายเพิ่มทุกปี", r:"139,148"}
   ],
   risks:[
@@ -106,7 +108,7 @@ const D = {
     {k:"เงินสดจากธุรกิจ", v:"เงินที่เข้ากระเป๋าจริงจากการขายของ"},
     {k:"ยอดขายสาขาเดิม", v:"ยอดขายร้านเก่า วัดว่าโตจริงไหม"}
   ],
-  foot:"<b>ข้อมูล ณ 31 ต.ค. 2569</b> จากงบการเงินปี 2568 (ตรวจสอบ) · งบไตรมาส 2/2569 (สอบทาน) · MD&amp;A · แบบ 56-1 · ราคาจาก Yahoo Finance (ยังไม่ยืนยันกับ set.or.th) · เลข [ ] คือแถวที่มาใน <i>output/data.csv</i> · สีไฟเป็นความเห็นผู้จัดทำ · <b>ไม่ใช่คำแนะนำการลงทุน</b> สรุปเพื่อการเรียนรู้เท่านั้น"
+  foot:"<b>ข้อมูล ณ 31 ต.ค. 2569</b> จากงบการเงินปี 2568 (ตรวจสอบ) · งบไตรมาส 2/2569 (สอบทาน) · MD&amp;A · แบบ 56-1 · ราคาจาก Yahoo Finance (ยังไม่ยืนยันกับ set.or.th) · สีไฟเป็นความเห็นผู้จัดทำ · <b>ไม่ใช่คำแนะนำการลงทุน</b> สรุปเพื่อการเรียนรู้เท่านั้น"
 };
 
 /* ===== TEMPLATE ===== */
@@ -152,6 +154,7 @@ document.getElementById("page").innerHTML = `
   <div class="gloss">${D.gloss.map(g=>`<div><b>${g.k}</b>${g.v}</div>`).join("")}</div>
 </section>
 
+<section class="howto"><b>วิธีอ่านเลขในหน้านี้</b> · <b>[40]</b> = เลขอ้างอิง ชี้ไปที่แถวที่มา (เอกสาร หน้า งวด) ในไฟล์ <i>output/data.csv</i> · เงินทุกจำนวนเป็น <b>บาท</b> · 1 หมื่นล้าน = 10,000 ล้าน · 1 แสนล้าน = 100,000 ล้าน · 1 ล้านล้าน = 1,000,000 ล้าน · % = เปรียบเทียบกับปีก่อน (ปี 2568 เทียบ 2567) เว้นแต่ระบุอื่น</section>
 <footer class="foot">${D.foot}</footer>`;
 if(location.hash==='#shot1'){var s=document.createElement('style');s.textContent='.page{margin:0!important;box-shadow:none!important;width:210mm!important;height:297mm!important;padding:12mm 13mm 9mm!important}body{background:#fff}';document.head.appendChild(s);}
 </script>

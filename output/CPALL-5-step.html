@@ -49,6 +49,30 @@ body{background:var(--bg);font-family:"Sarabun","Noto Sans Thai","Leelawadee UI"
 .sum div{border:1.5px solid var(--line);border-radius:3mm;padding:4mm 2.6mm;background:#fff;font-size:10.5pt;text-align:center}
 .sum i{display:block;width:8mm;height:8mm;border-radius:50%;margin:0 auto 1.8mm}
 .sum b{display:block;font-size:12pt;color:var(--accent)}
+.howto{background:#eef4f5;border-radius:2.6mm;padding:2.2mm 3.4mm;font-size:9.4pt;color:var(--ink);line-height:1.5}
+.howto b{color:var(--accent)}
+.sumhead{font-size:10.5pt;font-weight:800;color:var(--accent);margin-bottom:1.6mm}
+.sub{font-size:11.5pt;font-weight:800;color:var(--accent2);margin:3mm 0 1.6mm}
+.tbl{width:100%;border-collapse:collapse;font-size:9.6pt;margin:1.4mm 0}
+.tbl th{background:#f1ede1;text-align:left;font-weight:700;padding:1.2mm 2mm;border:1px solid var(--line);line-height:1.25}
+.tbl td{padding:1.1mm 2mm;border:1px solid var(--line);vertical-align:top}
+.tbl .n{text-align:right;white-space:nowrap}
+.tbl.sc td{font-size:10.5pt;padding:1.6mm 2mm}
+.tbl td.dn{color:var(--red);font-weight:800}
+.chart{margin:1mm 0 2mm}
+.tbl.pr{font-size:9pt}.tbl.pr th{padding:1mm 1.4mm}.tbl.pr td{padding:1.1mm 1.4mm}
+.tbl tr.hl td{background:#fdeede;font-weight:700}.tbl tr.md td{background:#f1ede1;color:var(--mute)}
+.tbl td.up{color:var(--green);font-weight:800}
+.tbl td.g2{color:var(--green);font-weight:800}.tbl td.y2{color:#b5820a;font-weight:800}
+.tbl.cat td{font-size:9.3pt;padding:1mm 1.6mm}.tbl.cat td:first-child{width:6mm;padding-right:0}
+.d{display:inline-block;width:3.6mm;height:3.6mm;border-radius:50%;margin-top:.6mm}
+.bars{margin:1mm 0 2mm}.barrow{display:grid;grid-template-columns:20mm 1fr;align-items:center;gap:3mm;margin-bottom:1.6mm}.barrow .lab{font-size:10.5pt;font-weight:700}
+.bar{display:flex;height:8mm;border-radius:2mm;overflow:hidden;font-size:10.5pt;font-weight:800;color:#fff}.bar i{display:flex;align-items:center;justify-content:center;font-style:normal}
+.c1{background:var(--accent2)}.c2{background:var(--accent)}.c3{background:#8a9598}
+.legend{display:flex;gap:5mm;font-size:9.5pt;margin-left:23mm}.legend span::before{content:"";display:inline-block;width:3mm;height:3mm;border-radius:50%;margin-right:1.4mm;vertical-align:-.3mm}
+.l1::before{background:var(--accent2)}.l2::before{background:var(--accent)}.l3::before{background:#8a9598}
+.sub2{font-size:10.5pt;font-weight:800;color:var(--accent2);margin:3mm 0 1.4mm}
+.d.g{background:var(--green)}.d.y{background:var(--amber)}.d.r{background:var(--red)}
 .foot{margin-top:auto;border-top:1px solid var(--line);padding-top:2mm;font-size:8pt;color:var(--mute);line-height:1.45}
 .foot b{color:var(--ink)}
 </style>
@@ -63,6 +87,17 @@ body{background:var(--bg);font-family:"Sarabun","Noto Sans Thai","Leelawadee UI"
   <p>ข้อมูล ณ 31 ต.ค. 2569 · ราคาปิด 43.75 บาท · เขียว = ดี · เหลือง = ระวัง (ความเห็นผู้จัดทำ)</p>
 </header>
 
+<section>
+  <div class="sumhead">สรุปผล 5 ขั้นก่อนอ่านรายละเอียด</div>
+  <div class="sum">
+    <div><i class="g"></i><b>1 ธุรกิจ</b>ซื้อซ้ำทุกวัน</div>
+    <div><i class="g"></i><b>2 การเงิน</b>กำไรโต +11% เพื่อนส่วนใหญ่ลด</div>
+    <div><i class="y"></i><b>3 มูลค่า</b>P/E ต่ำสุด 5 ปี แต่ DCF ต่ำกว่าราคา</div>
+    <div><i class="y"></i><b>4 เหตุการณ์</b>ปันผลหนุน ติดตามกัมพูชา</div>
+    <div><i class="y"></i><b>5 ความเสี่ยง</b>หนี้สูง ราคาพึ่งการโต</div>
+  </div>
+</section>
+
 <section class="step">
   <div class="sh"><div class="num">1</div><h2>ดูตัวธุรกิจ<small>ขายอะไร ทำเงินอย่างไร (ไม่เดาเศรษฐกิจ)</small></h2><div class="chip"><i class="g"></i>แข็งแรง</div></div>
   <div class="tiles t3">
@@ -70,51 +105,164 @@ body{background:var(--bg);font-family:"Sarabun","Noto Sans Thai","Leelawadee UI"
     <div class="tile"><b>85,843</b><span>บาท ยอดขายต่อร้านต่อวัน <span class="ref">[118]</span></span></div>
     <div class="tile"><b>959</b><span>คน ลูกค้าต่อร้านต่อวัน <span class="ref">[120]</span></span></div>
   </div>
-  <p class="line">ร้านสะดวกซื้อขายได้ <b>46%</b> แต่ทำกำไร <b>61%</b> <span class="ref">[108]</span> · เปิดร้านใหม่ ~700 ร้านต่อปี แต่ยอดขายสาขาเดิมโตแค่ <b>+0.8%</b> <span class="ref">[116,119]</span></p>
+  <div class="sub2">เงินมาจากไหน (ปี 2568 · ก่อนตัดรายการระหว่างกัน) <span class="ref">[108]</span></div>
+  <div class="bars">
+    <div class="barrow"><div class="lab">ยอดขาย</div><div class="bar"><i class="c1" style="width:46%">46%</i><i class="c2" style="width:48%">48%</i><i class="c3" style="width:6%">6%</i></div></div>
+    <div class="barrow"><div class="lab">กำไร</div><div class="bar"><i class="c1" style="width:61%">61%</i><i class="c2" style="width:28%">28%</i><i class="c3" style="width:11%">11%</i></div></div>
+    <div class="legend"><span class="l1">ร้านสะดวกซื้อ</span><span class="l2">ค้าส่ง · ห้างค้าปลีก · ศูนย์การค้า</span><span class="l3">อื่น ๆ</span></div>
+  </div>
+<p class="line">ร้านสะดวกซื้อขายได้ <b>46%</b> แต่ทำกำไร <b>61%</b> <span class="ref">[108]</span> · เปิดร้านใหม่ ~700 ร้านต่อปี แต่ยอดขายสาขาเดิมโตแค่ <b>+0.8%</b> <span class="ref">[116,119]</span></p>
   <p class="say">ธุรกิจซื้อซ้ำทุกวัน กำไรหลักมาจากร้านสะดวกซื้อ จับตายอดขายสาขาเดิม</p>
 </section>
 
-<section class="step">
-  <div class="sh"><div class="num">2</div><h2>ดูผลงานการเงิน<small>ปี 2568 เทียบปี 2567 (คำนวณ)</small></h2><div class="chip"><i class="g"></i>ดี</div></div>
-  <div class="tiles t4">
-    <div class="tile up"><b>+3.3%</b><span>รายได้ <span class="ref">[40]</span></span></div>
-    <div class="tile up"><b>+5.0%</b><span>กำไรจากดำเนินงาน <span class="ref">[46]</span></span></div>
-    <div class="tile up"><b>+11.3%</b><span>กำไรสุทธิ <span class="ref">[50,51]</span></span></div>
-    <div class="tile dn"><b>−2.5%</b><span>เงินสดจากธุรกิจ <span class="ref">[79]</span></span></div>
-  </div>
-  <p class="line">เงินสดจากธุรกิจ = <b>2.3 เท่า</b> ของกำไร <span class="ref">[83]</span> · หลังลงทุนและจ่ายค่าเช่าเหลือ <b>~32.5 พันล้านบาท</b> <span class="ref">[100]</span></p>
-  <p class="say">กำไรโตเร็วกว่ารายได้ แต่เงินสดจากธุรกิจลดเล็กน้อย อย่าอ่านว่าเงินสดโตตามกำไร</p>
-</section>
 
-<section class="step">
-  <div class="sh"><div class="num">3</div><h2>ดูมูลค่า<small>ธุรกิจนี้ควรมีมูลค่าเท่าไร (ไม่ใช่ราคาเท่าไร)</small></h2><div class="chip"><i class="y"></i>กลาง ๆ</div></div>
-  <div class="tiles t4">
-    <div class="tile now"><b>43.75</b><span>ราคาตอนนี้ · P/E 14.1 <span class="ref" style="color:#cfe0e4">[148]</span></span></div>
-    <div class="tile"><b>43.5</b><span>กรณีต่ำ (P/E 14.0) · ส่วนเผื่อ −1%</span></div>
-    <div class="tile"><b>52.9</b><span>กรณีกลาง (P/E 17.1) · ส่วนเผื่อ +17%</span></div>
-    <div class="tile"><b>62.4</b><span>กรณีสูง (P/E 20.1) · ส่วนเผื่อ +30%</span></div>
-  </div>
-  <p class="line">มูลค่า = กำไรต่อหุ้น <b>3.10</b> × P/E สิ้นปี 2568 (14.0) และสิ้นปี 2567 (20.1) <span class="ref">[53,154]</span> · ปันผล <b>3.8%</b> · กำไรต่อราคา <b>7.1%</b> (คำนวณ)</p>
-  <p class="note">เป็นสมมติฐานของผู้จัดทำ มี P/E ย้อนหลังแค่ 2 จุด · ยังไม่มี DCF · ยังไม่เทียบคู่แข่ง</p>
-  <p class="say">ราคาตอนนี้เท่า P/E ต่ำสุดที่เห็น ถ้ากลับค่ากลางมีส่วนเผื่อ ~17%</p>
-</section>
 
-<footer class="foot"><b>หน้า 1 จาก 2</b> · เลข [ ] คือแถวที่มาใน <i>output/data.csv</i> · "คำนวณ" = ผู้จัดทำคำนวณเองจากตัวเลขในงบ</footer>
+
+
+<section class="howto"><b>วิธีอ่านเลขในหน้านี้</b> · <b>[40]</b> = เลขอ้างอิง ชี้ไปที่แถวที่มา (เอกสาร หน้า งวด) ในไฟล์ <i>output/data.csv</i> · เงินทุกจำนวนเป็น <b>บาท</b> · 1 พันล้าน = 1,000 ล้าน · 1 แสนล้าน = 100,000 ล้าน · % = เทียบช่วงเดียวกันของปีก่อน · ปี 2565–2569 = ค.ศ. 2022–2026 · 6M = 6 เดือนแรก (ม.ค.–มิ.ย.) · "คำนวณ" = ผู้จัดทำคำนวณเองจากตัวเลขในงบ</section>
+<footer class="foot"><b>หน้า 1 จาก 5</b></footer>
 </main>
 
 <!-- ============ หน้า 2 ============ -->
 <main class="page">
 <section class="step">
-  <div class="sh"><div class="num">4</div><h2>ดูเหตุการณ์พิเศษ<small>มีอะไรที่อาจเปลี่ยนมูลค่าหรือไม่</small></h2><div class="chip"><i class="y"></i>มีเรื่องให้ติดตาม</div></div>
+  <div class="sh"><div class="num">2</div><h2>ดูผลงานการเงิน<small>ย้อนหลัง 3 ช่วง (ปี 2567 · ปี 2568 · 6 เดือนแรกปี 2569) และเทียบเพื่อนในอุตสาหกรรม</small></h2><div class="chip"><i class="g"></i>ดี</div></div>
+
+  <div class="sub">ก · CPALL ย้อนหลัง</div>
+  <table class="tbl">
+    <tr><th>รายการ</th><th class="n">ปี 2567</th><th class="n">ปี 2568</th><th class="n">6M 2568</th><th class="n">6M 2569</th><th>ที่มา</th></tr>
+    <tr><td>รายได้ (พันล้านบาท)</td><td class="n">959.0</td><td class="n">990.7</td><td class="n">494.7</td><td class="n">516.5</td><td><span class="ref">[40,66,Y1]</span></td></tr>
+    <tr><td>รายได้โตจากช่วงเดียวกันปีก่อน</td><td class="n">+7.1%</td><td class="n">+3.3%</td><td class="n">–</td><td class="n up">+4.4%</td><td><span class="ref">[Y1,66]</span> คำนวณ</td></tr>
+    <tr><td>อัตรากำไรขั้นต้น GPM</td><td class="n">22.6%</td><td class="n">22.7%</td><td class="n">22.8%</td><td class="n">22.8%</td><td><span class="ref">[43,66,68]</span></td></tr>
+    <tr><td>อัตรากำไรสุทธิ NPM (กำไรบริษัทใหญ่ ÷ รายได้)</td><td class="n">2.6%</td><td class="n">2.8%</td><td class="n">2.9%</td><td class="n up">3.2%</td><td><span class="ref">[50,51,73,74]</span> คำนวณ</td></tr>
+    <tr><td>EBITDA margin</td><td class="n">9.2%</td><td class="n">9.2%</td><td class="n">–</td><td class="n">–</td><td><span class="ref">[P1,P2]</span></td></tr>
+    <tr><td>ROE · ROA · ROIC</td><td class="n">20.9 · 3.2 · 9.6 %</td><td class="n">20.9 · 3.3 · 9.7 %</td><td class="n">–</td><td class="n">–</td><td><span class="ref">[P1,P2]</span></td></tr>
+    <tr><td>กำไรสุทธิ (พันล้านบาท)</td><td class="n">25.3</td><td class="n">28.2</td><td class="n">14.4</td><td class="n up">16.6</td><td><span class="ref">[50,51,73,74]</span></td></tr>
+    <tr><td>กำไรต่อหุ้น EPS (บาท)</td><td class="n">2.77</td><td class="n">3.10</td><td class="n">1.57</td><td class="n up">1.84</td><td><span class="ref">[53,76]</span></td></tr>
+    <tr><td>เงินสดจากธุรกิจ (พันล้านบาท)</td><td class="n">76.2</td><td class="n">74.3</td><td class="n">27.9</td><td class="n up">32.0</td><td><span class="ref">[79,80]</span></td></tr>
+    <tr><td>ดอกเบี้ยจ่าย (พันล้านบาท)</td><td class="n">15.5</td><td class="n">14.9</td><td class="n">7.6</td><td class="n up">7.2</td><td><span class="ref">[47,70]</span></td></tr>
+  </table>
+  <p class="note">6M = 6 เดือนแรก ไม่ได้ปรับเป็นรายปี จึงไม่คำนวณ ROE/ROA/ROIC · อย่าเอา 6M × 2 เป็นกำไรทั้งปี เพราะครึ่งปีแรกและครึ่งปีหลังไม่เท่ากัน</p>
+
+  <div class="sub">ข · เทียบเพื่อนในอุตสาหกรรม (ปี 2568)</div>
+  <table class="tbl pr">
+    <tr><th>บริษัท</th><th class="n">รายได้<br>พันล้านบาท</th><th class="n">GPM</th><th class="n">NPM</th><th class="n">EBITDA<br>margin</th><th class="n">ROE</th><th class="n">ROA</th><th class="n">ROIC</th><th class="n">รายได้โต<br>ปี 67</th><th class="n">รายได้โต<br>ปี 68</th></tr>
+    <tr class="hl"><td><b>CPALL</b></td><td class="n">991</td><td class="n">22.7%</td><td class="n">2.8%</td><td class="n">9.2%</td><td class="n">20.9%</td><td class="n">3.3%</td><td class="n">9.7%</td><td class="n">+7.1%</td><td class="n">+3.3%</td></tr>
+    <tr><td>CPAXT (CPALL ถือ 59.9%)</td><td class="n">518</td><td class="n">16.1%</td><td class="n">1.8%</td><td class="n">6.7%</td><td class="n">3.1%</td><td class="n">1.7%</td><td class="n">3.3%</td><td class="n">+4.6%</td><td class="n">+1.8%</td></tr>
+    <tr><td>CRC</td><td class="n">228</td><td class="n">26.4%</td><td class="n">3.2%</td><td class="n">14.2%</td><td class="n">11.0%</td><td class="n">2.9%</td><td class="n">6.6%</td><td class="n">-2.0%</td><td class="n">+0.7%</td></tr>
+    <tr><td>BJC</td><td class="n">154</td><td class="n">20.4%</td><td class="n">2.6%</td><td class="n">13.7%</td><td class="n">3.3%</td><td class="n">1.5%</td><td class="n">3.4%</td><td class="n">+2.0%</td><td class="n">-2.4%</td></tr>
+    <tr><td>HMPRO</td><td class="n">68</td><td class="n">27.6%</td><td class="n">8.9%</td><td class="n">17.3%</td><td class="n">22.7%</td><td class="n">8.6%</td><td class="n">15.0%</td><td class="n">-0.5%</td><td class="n">-2.7%</td></tr>
+    <tr class="md"><td>มัธยฐานเพื่อน 4 ตัว</td><td class="n">–</td><td class="n">23.4%</td><td class="n">2.9%</td><td class="n">14.0%</td><td class="n">7.2%</td><td class="n">2.3%</td><td class="n">5.0%</td><td class="n">+0.7%</td><td class="n">-0.8%</td></tr>
+  </table>
+  <p class="note">ข้อมูลเพื่อน: Yahoo Finance (แหล่งรอง ยังไม่ยืนยันกับงบที่ยื่น) <span class="ref">[P1,P2]</span> · NPM = กำไรถึงผู้ถือหุ้นสามัญ ÷ รายได้ (ของ CPALL ต่ำกว่าตารางบนเล็กน้อย เพราะหักดอกเบี้ยหุ้นกู้ด้อยสิทธิ) · ROE = กำไรสามัญ ÷ ส่วนผู้ถือหุ้นเฉลี่ย · ROA = กำไรรวมส่วนน้อย ÷ สินทรัพย์เฉลี่ย · ROIC = EBIT×(1−ภาษี) ÷ เงินลงทุนเฉลี่ย · ธุรกิจของเพื่อนไม่เหมือน 7-Eleven เป๊ะ (ค้าส่ง ห้าง ซ่อมบ้าน) จึงเทียบได้แค่คร่าว ๆ</p>
+
+  <div class="sub">ค · คาดไว้ vs ที่เกิดจริง (ปี 2569)</div>
+  <table class="tbl">
+    <tr><th>ตัวชี้วัด</th><th>คาด / เป้า 2569</th><th>จริงครึ่งปีแรก</th><th>ผล</th></tr>
+    <tr><td>ยอดขายสาขาเดิม</td><td>+1.5–2% (ผู้บริหาร) <span class="ref">[158]</span></td><td>Q1 +1.9% · Q2 +0.8% <span class="ref">[119]</span></td><td class="y2">ชะลอลง</td></tr>
+    <tr><td>เปิดร้านใหม่ในไทย</td><td>~700 ร้าน <span class="ref">[147]</span></td><td>339 ร้าน (Q1 139 + Q2 200) <span class="ref">[116]</span></td><td class="g2">ตามแผน (48%)</td></tr>
+    <tr><td>รายได้โต</td><td>+4% (ประมาณการผู้จัดทำ · แย่สุด +2% / ดีสุด +6%)</td><td>+4.4% <span class="ref">[66]</span></td><td class="g2">ตามฐาน</td></tr>
+  </table>
+  <p class="note">ไม่มีประมาณการฉันทามติของนักวิเคราะห์ในแหล่งข้อมูลที่ใช้ จึงเทียบ "คาดกับจริง" ของเพื่อนไม่ได้ และเป้าปีก่อนของ CPALL ก็ยังไม่ได้ตรวจ <b>[ยังไม่ยืนยัน]</b> · ประมาณการรายได้เป็นของผู้จัดทำ (เป้า SSS 1.5–2% + ร้านใหม่ ~4% ของจำนวนร้าน)</p>
+  <p class="say">CPALL โตรายได้เร็วสุดในกลุ่ม (+3.3% เทียบมัธยฐานเพื่อน -0.8%) และกำไรสุทธิโต +11% ขณะที่เพื่อน 3 จาก 4 ตัวกำไรลด ROE สูงส่วนหนึ่งเพราะกู้เยอะ (ROA แค่ 3.3%)</p>
+</section>
+<footer class="foot"><b>หน้า 2 จาก 5</b> · วิธีอ่านเลขอ้างอิงและหน่วยดูหน้า 1</footer>
+</main>
+
+<!-- ============ หน้า 3 ============ -->
+<main class="page">
+<section class="step">
+  <div class="sh"><div class="num">3</div><h2>ดูมูลค่า (1/2) · P/E ของหุ้นเอง<small>เทียบ P/E ย้อนหลัง 5 ปี และ P/E ข้างหน้า</small></h2><div class="chip"><i class="y"></i>ราคาพึ่งการเติบโต</div></div>
+
+  <div class="sub">P/E ย้อนหลัง 5 ปี (ม.ค. 2565 – ต.ค. 2569 · รายเดือน)</div>
+  <div class="chart"><svg viewBox="0 0 700 230" width="100%" role="img" aria-label="P/E รายเดือน ปี 2565-2569"><line x1="38" x2="686" y1="202.0" y2="202.0" stroke="#e3dccb" stroke-width=".6"/><text x="34" y="205.0" font-size="9" fill="#5d6b6f" text-anchor="end">0</text><line x1="38" x2="686" y1="167.8" y2="167.8" stroke="#e3dccb" stroke-width=".6"/><text x="34" y="170.8" font-size="9" fill="#5d6b6f" text-anchor="end">10</text><line x1="38" x2="686" y1="133.6" y2="133.6" stroke="#e3dccb" stroke-width=".6"/><text x="34" y="136.6" font-size="9" fill="#5d6b6f" text-anchor="end">20</text><line x1="38" x2="686" y1="99.5" y2="99.5" stroke="#e3dccb" stroke-width=".6"/><text x="34" y="102.5" font-size="9" fill="#5d6b6f" text-anchor="end">30</text><line x1="38" x2="686" y1="65.3" y2="65.3" stroke="#e3dccb" stroke-width=".6"/><text x="34" y="68.3" font-size="9" fill="#5d6b6f" text-anchor="end">40</text><line x1="38" x2="686" y1="31.1" y2="31.1" stroke="#e3dccb" stroke-width=".6"/><text x="34" y="34.1" font-size="9" fill="#5d6b6f" text-anchor="end">50</text><line x1="38" x2="686" y1="74.0" y2="74.0" stroke="#c8453b" stroke-width="1.2" stroke-dasharray="4 3"/><text x="684" y="71.0" font-size="9.5" fill="#c8453b" text-anchor="end">+1SD 37.4</text><line x1="38" x2="686" y1="114.6" y2="114.6" stroke="#5d6b6f" stroke-width="1.2" stroke-dasharray="6 3"/><text x="684" y="111.6" font-size="9.5" fill="#5d6b6f" text-anchor="end">เฉลี่ย 25.6</text><line x1="38" x2="686" y1="155.2" y2="155.2" stroke="#2e8b57" stroke-width="1.2" stroke-dasharray="4 3"/><text x="42" y="166.2" font-size="9.5" fill="#2e8b57" text-anchor="start">−1SD 13.7</text><polyline points="38.0,47.7 49.4,34.8 60.7,42.2 72.1,42.2 83.5,39.1 94.8,54.5 106.2,51.4 117.6,50.8 128.9,63.7 140.3,54.5 151.7,42.2 163.1,34.2 174.4,88.9 185.8,96.6 197.2,96.6 208.5,91.9 219.9,93.6 231.3,95.7 242.6,94.0 254.0,91.0 265.4,99.1 276.7,108.0 288.1,113.6 299.5,106.8 310.8,137.5 322.2,131.0 333.6,134.4 344.9,132.0 356.3,132.0 367.7,134.1 379.1,130.1 390.4,127.3 401.8,121.2 413.2,123.9 424.5,126.4 435.9,133.2 447.3,144.7 458.6,142.5 470.0,147.4 481.4,145.2 492.7,150.2 504.1,153.5 515.5,149.9 526.8,153.5 538.2,149.9 549.6,151.3 560.9,154.3 572.3,154.0 583.7,157.9 595.1,149.5 606.4,155.8 617.8,157.9 629.2,154.1 640.5,154.6 651.9,153.3 663.3,155.1 674.6,158.9 686.0,157.6" fill="none" stroke="#0f4c5c" stroke-width="2"/><text x="38.0" y="220" font-size="9.5" fill="#5d6b6f" text-anchor="middle">2565</text><line x1="38.0" x2="38.0" y1="202" y2="205" stroke="#5d6b6f" stroke-width=".8"/><text x="174.4" y="220" font-size="9.5" fill="#5d6b6f" text-anchor="middle">2566</text><line x1="174.4" x2="174.4" y1="202" y2="205" stroke="#5d6b6f" stroke-width=".8"/><text x="310.8" y="220" font-size="9.5" fill="#5d6b6f" text-anchor="middle">2567</text><line x1="310.8" x2="310.8" y1="202" y2="205" stroke="#5d6b6f" stroke-width=".8"/><text x="447.3" y="220" font-size="9.5" fill="#5d6b6f" text-anchor="middle">2568</text><line x1="447.3" x2="447.3" y1="202" y2="205" stroke="#5d6b6f" stroke-width=".8"/><text x="583.7" y="220" font-size="9.5" fill="#5d6b6f" text-anchor="middle">2569</text><line x1="583.7" x2="583.7" y1="202" y2="205" stroke="#5d6b6f" stroke-width=".8"/><circle cx="686.0" cy="157.6" r="3.6" fill="#e36414"/><text x="680.0" y="150.6" font-size="10" font-weight="700" fill="#e36414" text-anchor="end">ตอนนี้ 13.0 เท่า</text></svg></div>
   <div class="tiles t4 s4">
-    <div class="tile up"><b>3.36 พันล้าน</b><span>ซื้อหุ้นคืน ปี 2568 (ปีก่อน 0) <span class="ref">[97]</span></span></div>
-    <div class="tile up"><b>0.60 → 1.65</b><span>ปันผลต่อหุ้น (บาท) ใน 5 ปี <span class="ref">[139]</span></span></div>
-    <div class="tile dn"><b>24.8 พันล้าน</b><span>หุ้นกู้ครบกำหนดใน 1 ปี <span class="ref">[16]</span></span></div>
+    <div class="tile"><b>25.6 เท่า</b><span>เฉลี่ย 5 ปี (ช่วง 12.6–49.1)</span></div>
+    <div class="tile"><b>16.8 เท่า</b><span>เฉลี่ยตั้งแต่ปี 2567</span></div>
+    <div class="tile now"><b>13.0 เท่า</b><span>ตอนนี้ (EPS 12 เดือน 3.37)</span></div>
+    <div class="tile dn"><b>ต่ำกว่า 93%</b><span>ของเดือนทั้งหมดใน 5 ปี</span></div>
+  </div>
+  <p class="note"><span class="ref">[B1,B2]</span> P/E รายเดือน = ราคาปิดสิ้นเดือน ÷ กำไรต่อหุ้นของปีนั้น (ปี 2565–2568 ใช้ EPS เต็มปี · ปี 2569 ใช้ EPS 12 เดือนล่าสุด = 3.10 + 1.84 − 1.57 = 3.37) · หน้าอื่นใช้ P/E 14.1 เท่า ซึ่งใช้ EPS ปี 2568 (3.10) จึงต่างจาก 13.0 เท่าที่นี่</p>
+
+  <table class="tbl">
+    <tr><th>ปี</th><th class="n">EPS (บาท)</th><th class="n">P/E เฉลี่ย</th><th class="n">ต่ำ – สูง</th></tr>
+    <tr><td>2565 (2022)</td><td class="n">1.39</td><td class="n">45.5</td><td class="n">40.5 – 49.1</td></tr>
+    <tr><td>2566 (2023)</td><td class="n">2.01</td><td class="n">30.4</td><td class="n">25.9 – 33.1</td></tr>
+    <tr><td>2567 (2024)</td><td class="n">2.77</td><td class="n">21.0</td><td class="n">18.9 – 23.6</td></tr>
+    <tr><td>2568 (2025)</td><td class="n">3.10</td><td class="n">15.3</td><td class="n">14.0 – 17.4</td></tr>
+    <tr><td>2569 (ม.ค.–ต.ค. 2026)</td><td class="n">3.37 (12 เดือน)</td><td class="n">13.6</td><td class="n">12.6 – 15.4</td></tr>
+  </table>
+  <p class="say">อย่าใช้ค่าเฉลี่ย 5 ปี (25.6 เท่า) เป็นค่ากลางตรง ๆ: ปี 2565 กำไรต่อหุ้นต่ำ (1.39) P/E จึงสูงถึง 45 เท่า ต่อมากำไรโต 2.2 เท่าแต่ราคาลดจาก ~63 เหลือ ~44 บาท P/E จึงหดจาก 45 เหลือ 13 เท่า ตลาดให้ราคาต่ำลงทั้งที่กำไรโต เป็นได้ทั้งโอกาสหรือสัญญาณว่าตลาดมองการเติบโตต่ำลง</p>
+
+  <div class="sub">P/E ข้างหน้า (Forward P/E) = ราคา 43.75 บาท ÷ EPS ที่ประมาณการ</div>
+  <table class="tbl sc">
+    <tr><th>ปีประมาณการ</th><th class="n">แย่สุด Worst</th><th class="n">ฐาน Base</th><th class="n">ดีสุด Best</th></tr>
+    <tr><td>EPS 2569E (บาท) · โตจาก 3.10</td><td class="n">3.26 (+5%)</td><td class="n">3.47 (+12%)</td><td class="n">3.60 (+16%)</td></tr>
+    <tr><td><b>Forward P/E 2569E</b></td><td class="n"><b>13.4 เท่า</b></td><td class="n"><b>12.6 เท่า</b></td><td class="n"><b>12.2 เท่า</b></td></tr>
+    <tr><td>EPS 2570E (บาท) · โตต่อจาก 2569E</td><td class="n">3.35 (+3%)</td><td class="n">3.75 (+8%)</td><td class="n">3.96 (+10%)</td></tr>
+    <tr><td><b>Forward P/E 2570E</b></td><td class="n"><b>13.0 เท่า</b></td><td class="n"><b>11.7 เท่า</b></td><td class="n"><b>11.1 เท่า</b></td></tr>
+  </table>
+  <p class="note"><b>อัตราโตของ EPS เป็นสมมติฐานของผู้จัดทำ ไม่ใช่ฉันทามตินักวิเคราะห์</b> (ไม่มีข้อมูล) · อ้างอิง: EPS 6 เดือนแรกปี 2569 โต +17% (1.84 เทียบ 1.57) ฝั่งดีสุดจึงใกล้ความเร็วครึ่งปีแรก <span class="ref">[76,F1]</span></p>
+</section>
+<footer class="foot"><b>หน้า 3 จาก 5</b> · วิธีอ่านเลขอ้างอิงและหน่วยดูหน้า 1</footer>
+</main>
+
+<!-- ============ หน้า 4 ============ -->
+<main class="page">
+<section class="step">
+  <div class="sh"><div class="num">3</div><h2>ดูมูลค่า (2/2) · DCF<small>ประเมินจากเงินสดที่ธุรกิจจะเหลือให้ผู้ถือหุ้น · 3 กรณี</small></h2><div class="chip"><i class="y"></i>ราคาพึ่งการเติบโต</div></div>
+
+  <div class="sub">DCF คิดจากเงินสดที่เหลือถึงผู้ถือหุ้น (FCFE)</div>
+  <p class="line"><b>DCF</b> = ประมาณเงินสดที่ธุรกิจจะเหลือให้ผู้ถือหุ้นในอนาคต แล้วคิดกลับมาเป็นมูลค่าวันนี้ (อนาคตมีค่าน้อยกว่าวันนี้ จึงต้องหักด้วย "อัตราคิดลด")</p>
+  <table class="tbl">
+    <tr><th>เงินสดที่เหลือถึงผู้ถือหุ้น ปี 2568 (พันล้านบาท)</th><th class="n">จำนวน</th><th>ที่มา</th></tr>
+    <tr><td>เงินสดจากธุรกิจ</td><td class="n">+74.26</td><td><span class="ref">[79]</span></td></tr>
+    <tr><td>ลงทุน: ซื้อสินทรัพย์ถาวร + ไม่มีตัวตน + อสังหาเพื่อลงทุน</td><td class="n">−30.38</td><td><span class="ref">[86,88]</span></td></tr>
+    <tr><td>จ่ายค่าเช่า</td><td class="n">−17.31</td><td><span class="ref">[89]</span></td></tr>
+    <tr><td>จ่ายดอกเบี้ย (+ ดอกเบี้ยหุ้นกู้ด้อยสิทธิ 0.46)</td><td class="n">−11.50</td><td><span class="ref">[D1,D2]</span></td></tr>
+    <tr><td>ปันผลที่บริษัทย่อยจ่ายให้ผู้ถือหุ้นส่วนน้อย</td><td class="n">−2.99</td><td><span class="ref">[95]</span></td></tr>
+    <tr><td><b>เหลือถึงผู้ถือหุ้น (FCFE)</b> = <b>1.35 บาทต่อหุ้น</b> (8,911 ล้านหุ้น)</td><td class="n"><b>12.07</b></td><td><span class="ref">[D3]</span> คำนวณ</td></tr>
+  </table>
+  <p class="note">ตัวเลขนี้ใกล้เคียงปันผลที่จ่ายผู้ถือหุ้นจริง 12.13 พันล้านบาท <span class="ref">[95]</span> หมายถึงบริษัทจ่ายปันผลเกือบเท่าเงินสดที่เหลือ</p>
+
+  <table class="tbl sc">
+    <tr><th>กรณี</th><th class="n">เงินสดโตปีละ<br>(5 ปีแรก)</th><th class="n">โตต่อเนื่อง<br>หลังปีที่ 5</th><th class="n">อัตรา<br>คิดลด</th><th class="n">มูลค่า<br>ต่อหุ้น</th><th class="n">เทียบราคา<br>43.75</th></tr>
+    <tr><td><b>Worst</b> แย่สุด</td><td class="n">3%</td><td class="n">2%</td><td class="n">10%</td><td class="n"><b>18.0 บาท</b></td><td class="n dn">−59%</td></tr>
+    <tr><td><b>Base</b> ฐาน</td><td class="n">8%</td><td class="n">3%</td><td class="n">9%</td><td class="n"><b>28.8 บาท</b></td><td class="n dn">−34%</td></tr>
+    <tr><td><b>Best</b> ดีสุด</td><td class="n">12%</td><td class="n">3.5%</td><td class="n">8.5%</td><td class="n"><b>40.3 บาท</b></td><td class="n dn">−8%</td></tr>
+  </table>
+  <p class="line"><b>คิดกลับด้าน:</b> ราคา 43.75 บาท ต้องการให้เงินสดที่เหลือโต <b>~18% ต่อปี นาน 5 ปี</b> (ที่อัตราคิดลด 9% โตต่อเนื่อง 3%) <span class="ref">[D5]</span> ซึ่งสูงกว่ากำไรสุทธิที่โต +11% ปีล่าสุด</p>
+  <p class="note"><b>ข้อสมมติทั้งหมดในตารางด้านบนเป็นของผู้จัดทำ ไม่ใช่ข้อเท็จจริง</b> · อัตราคิดลดยังไม่ได้คำนวณจากผลตอบแทนพันธบัตร (ไม่มีข้อมูล) · เงินลงทุนปี 2568 รวมการขยายร้าน ~700 ร้านต่อปี แยกส่วนที่เป็นการบำรุงรักษาไม่ได้ จึงอาจทำให้ FCFE ต่ำกว่าที่ธุรกิจเดิมทำได้จริง <b>[ยังไม่ยืนยัน]</b> · ไม่ได้สมมติการกู้เพิ่มหรือชำระหนี้</p>
+  <p class="say">DCF บอก 18.0–40.3 บาท ต่ำกว่าราคาทุกกรณี (สูตรอยู่ใน [D4]) ขณะที่ P/E ในหน้า 3 ให้ผลสูงกว่า ราคาปัจจุบันจึงต้องพึ่งการเติบโตของเงินสดในอนาคต และราคาต่ำอาจเป็นเพราะธุรกิจแย่ลงจริง ไม่ใช่แค่ถูก</p>
+</section>
+
+<footer class="foot"><b>หน้า 4 จาก 5</b> · วิธีอ่านเลขอ้างอิงและหน่วยดูหน้า 1</footer>
+</main>
+
+<!-- ============ หน้า 5 ============ -->
+<main class="page">
+<section class="step">
+  <div class="sh"><div class="num">4</div><h2>ดูเหตุการณ์พิเศษและตัวเร่งการเติบโต<small>มีอะไรที่อาจเปลี่ยนมูลค่า และอะไรจะพาให้โต</small></h2><div class="chip"><i class="y"></i>มีเรื่องให้ติดตาม</div></div>
+  <div class="tiles t4 s4">
+    <div class="tile up"><b>3.36 พันล้านบาท</b><span>ซื้อหุ้นคืน ปี 2568 (ปีก่อน 0) <span class="ref">[97]</span></span></div>
+    <div class="tile up"><b>0.60 → 1.65</b><span>ปันผลต่อหุ้น (บาท) ปีผลงาน 2564 → 2568 <span class="ref">[139]</span></span></div>
+    <div class="tile dn"><b>24.8 พันล้านบาท</b><span>หุ้นกู้ครบกำหนดใน 1 ปี <span class="ref">[16]</span></span></div>
     <div class="tile dn"><b>125 → 39</b><span>ร้านกัมพูชา ใน 9 เดือน <span class="ref">[121]</span></span></div>
   </div>
   <p class="line">กลุ่ม CPG ถือหุ้น <b>35.92%</b> · ซื้อสินค้าจากบริษัทในเครือ <b>98 พันล้านบาทต่อปี</b> <span class="ref">[127,123]</span></p>
   <p class="line">ควบรวม / แยกกิจการ: ไม่พบในข้อมูลที่ใช้ <b>[ยังไม่ได้ค้นครบทุกเอกสาร]</b></p>
-  <p class="say">ปันผลและซื้อหุ้นคืนหนุนผู้ถือหุ้น ส่วนที่ต้องติดตามคือรายการกับบริษัทในเครือและกัมพูชา</p>
+    <div class="sub">ตัวเร่งการเติบโต (Catalysts)</div>
+  <table class="tbl cat">
+    <tr><th></th><th>ตัวเร่ง</th><th>ดูอะไร</th><th>ตอนนี้</th></tr>
+    <tr><td><i class="d g"></i></td><td>ขยายร้านใหม่ ~700 ร้านต่อปี</td><td>ร้านสุทธิรายไตรมาส</td><td>ครึ่งปีแรก 339 ร้าน (48% ของแผน) <span class="ref">[116,147]</span></td></tr>
+    <tr><td><i class="d y"></i></td><td>ยอดขายสาขาเดิมฟื้น (เป้า 1.5–2%)</td><td>SSS รายไตรมาส</td><td>Q1 +1.9% → Q2 +0.8% ชะลอ <span class="ref">[119,158]</span></td></tr>
+    <tr><td><i class="d y"></i></td><td>กำไรขั้นต้นร้านสะดวกซื้อขยาย (ผู้บริหารคาด 10–20 bps)</td><td>GPM ร้านสะดวกซื้อ</td><td>29.3% ทรงตัว · คำพูดผู้บริหาร ถอดเสียงไม่ชัด <span class="ref">[112,159]</span></td></tr>
+    <tr><td><i class="d g"></i></td><td>ดอกเบี้ยจ่ายลดจากการรีไฟแนนซ์</td><td>ต้นทุนการเงิน</td><td>6M 7.2 vs 7.6 พันล้านบาท (−4.9%) <span class="ref">[70]</span></td></tr>
+    <tr><td><i class="d y"></i></td><td>ขายออนไลน์/ส่งถึงบ้าน</td><td>สัดส่วน O2O</td><td>~11% ของยอดขาย ไม่เพิ่ม <span class="ref">[122]</span></td></tr>
+    <tr><td><i class="d r"></i></td><td>บริษัทลูก CP Axtra (ถือ 59.93%)</td><td>กำไรสุทธิ CPAXT</td><td>ปี 2568 ลด 10.6 → 9.4 พันล้านบาท (−11.5%) <span class="ref">[129,P1,P2]</span></td></tr>
+  </table>
+  <p class="note">สีจุด: เขียว = เป็นไปตามแผน · เหลือง = ต้องจับตา · แดง = ตัวถ่วง (ความเห็นผู้จัดทำ) · คำพูดผู้บริหารเป็นแหล่งชั้น 3 (ถอดเสียงอัตโนมัติ อาจคลาดเคลื่อน)</p>
+<p class="say">ปันผลและซื้อหุ้นคืนหนุนผู้ถือหุ้น ส่วนที่ต้องติดตามคือรายการกับบริษัทในเครือและกัมพูชา</p>
 </section>
 
 <section class="step">
@@ -122,7 +270,7 @@ body{background:var(--bg);font-family:"Sarabun","Noto Sans Thai","Leelawadee UI"
   <div class="two">
     <div class="mini"><h3>ความเสี่ยงหลัก</h3>
       <ul>
-        <li>หนี้มีดอกเบี้ย <b>3.2 แสนล้าน</b> (หนี้สุทธิต่อทุน 0.82 เท่า เพดาน 2) <span class="ref">[22,145]</span></li>
+        <li>หนี้มีดอกเบี้ย <b>3.2 แสนล้านบาท</b> (หนี้สุทธิต่อทุน 0.82 เท่า เพดาน 2 เท่า) <span class="ref">[22,145]</span></li>
         <li>ค่าความนิยม = <b>37%</b> ของสินทรัพย์ ถ้าตัดมูลค่า กำไรลด <span class="ref">[29,9,143]</span></li>
         <li>ยอดขายสาขาเดิมโตช้า <b>+0.8%</b> <span class="ref">[119]</span></li>
       </ul></div>
@@ -133,21 +281,13 @@ body{background:var(--bg);font-family:"Sarabun","Noto Sans Thai","Leelawadee UI"
         <li>หนี้สุทธิต่อทุนเข้าใกล้ 2 เท่า</li>
       </ul></div>
   </div>
-  <p class="line">ส่วนเผื่อความผิดพลาด: <b>−1% / +17% / +30%</b> (ต่ำ / กลาง / สูง) · ขนาดเงินลงทุน: ผู้เรียนกรอกเอง ไม่ใส่ใน repo Public</p>
-  <p class="say">ธุรกิจแข็งแรง แต่ส่วนเผื่อขึ้นกับสมมติฐานว่า P/E จะกลับค่ากลาง ซึ่งยังไม่แน่</p>
+  <p class="line">ส่วนเผื่อ (เทียบราคา): P/E <b>−1% / +17% / +30%</b> · DCF <b>−59% / −34% / −8%</b> (แย่สุด / ฐาน / ดีสุด) · ขนาดเงินลงทุน: ผู้เรียนกรอกเอง ไม่ใส่ใน repo Public</p>
+  <p class="say">ธุรกิจแข็งแรง แต่ราคาปัจจุบันพึ่งการเติบโตของเงินสด DCF ต่ำกว่าราคาทุกกรณี ส่วนเผื่อน้อย</p>
 </section>
 
-<section>
-  <div class="sum">
-    <div><i class="g"></i><b>1 ธุรกิจ</b>ซื้อซ้ำทุกวัน</div>
-    <div><i class="g"></i><b>2 การเงิน</b>กำไรโต +11%</div>
-    <div><i class="y"></i><b>3 มูลค่า</b>P/E ต่ำสุดที่เห็น</div>
-    <div><i class="y"></i><b>4 เหตุการณ์</b>ปันผลหนุน ติดตามกัมพูชา</div>
-    <div><i class="y"></i><b>5 ความเสี่ยง</b>หนี้สูง ส่วนเผื่อน้อย</div>
-  </div>
-</section>
 
-<footer class="foot"><b>หน้า 2 จาก 2</b> · <b>ที่มา:</b> งบการเงินปี 2568 (KPMG ไม่มีเงื่อนไข) · งบไตรมาส 2/2569 (สอบทาน) · MD&amp;A · แบบ 56-1 · ราคาจาก Yahoo Finance (ยังไม่ยืนยันกับ set.or.th) · กรอบ 5 ขั้นตามที่ผู้เรียนสรุปจากหนังสือของ Pearl &amp; Rosenbaum · <b>ไม่ได้ตัดสินว่าควรซื้อหรือขาย</b> เป็นสรุปเพื่อการเรียนรู้ ไม่ใช่คำแนะนำการลงทุน</footer>
+
+<footer class="foot"><b>หน้า 5 จาก 5</b> · <b>ที่มา:</b> เลข [ ] = ดูไฟล์ <i>output/data.csv</i> · งบการเงินปี 2568 (KPMG ไม่มีเงื่อนไข) · งบไตรมาส 2/2569 (สอบทาน) · MD&amp;A · แบบ 56-1 · ราคาจาก Yahoo Finance (ยังไม่ยืนยันกับ set.or.th) · กรอบ 5 ขั้นตามที่ผู้เรียนสรุปจากหนังสือของ Pearl &amp; Rosenbaum · <b>ไม่ได้ตัดสินว่าควรซื้อหรือขาย</b> เป็นสรุปเพื่อการเรียนรู้ ไม่ใช่คำแนะนำการลงทุน</footer>
 </main>
 
 <script>
