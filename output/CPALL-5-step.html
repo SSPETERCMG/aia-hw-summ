@@ -7,42 +7,49 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Sarabun:wght@400;600;700;800&display=swap" rel="stylesheet">
 <style>
-:root{--bg:#f4f1ea;--paper:#fffdf8;--ink:#1d2a2e;--mute:#5d6b6f;--line:#ddd6c6;--green:#2e8b57;--amber:#e0a21b;--red:#c8453b;--accent:#0f4c5c;--accent2:#e36414}
+:root{--bg:#f4f1ea;--paper:#fffdf8;--ink:#1d2a2e;--mute:#5d6b6f;--line:#e3dccb;--green:#2e8b57;--amber:#e0a21b;--red:#c8453b;--accent:#0f4c5c;--accent2:#e36414}
 *{box-sizing:border-box;margin:0;padding:0}
 body{background:var(--bg);font-family:"Sarabun","Noto Sans Thai","Leelawadee UI",Tahoma,sans-serif;color:var(--ink);line-height:1.35;-webkit-print-color-adjust:exact;print-color-adjust:exact}
-.page{width:210mm;height:297mm;margin:8mm auto;background:var(--paper);padding:10mm 12mm 8mm;overflow:hidden;display:flex;flex-direction:column;gap:3mm;box-shadow:0 2px 14px rgba(0,0,0,.12);page-break-after:always;break-after:page}
+.page{width:210mm;height:297mm;margin:8mm auto;background:var(--paper);padding:11mm 13mm 8mm;overflow:hidden;display:flex;flex-direction:column;gap:5mm;box-shadow:0 2px 14px rgba(0,0,0,.12);page-break-after:always;break-after:page}
 .page:last-child{page-break-after:auto;break-after:auto}
 @page{size:A4;margin:0}
 @media print{body{background:none}.page{margin:0;box-shadow:none}}
 @media (max-width:820px){.page{width:100%;height:auto;margin:0 0 8px;padding:16px}}
-.ref{font-size:6.8pt;color:var(--mute);font-weight:400;white-space:nowrap}
-.head{display:flex;justify-content:space-between;gap:6mm;border-bottom:2px solid var(--accent);padding-bottom:2.4mm}
-.head .tk{font-size:8.5pt;font-weight:700;color:var(--accent2);letter-spacing:1px}
-.head h1{font-size:16pt;font-weight:800;line-height:1.15}
-.head .asof{font-size:7.5pt;color:var(--mute);text-align:right;max-width:52mm}
-.step{border:1px solid var(--line);border-radius:2.5mm;background:#fff;padding:2.4mm 3mm}
-.sh{display:flex;align-items:center;gap:2.4mm;margin-bottom:1.4mm}
-.num{flex:none;width:7mm;height:7mm;border-radius:50%;background:var(--accent);color:#fff;font-weight:800;font-size:10pt;display:flex;align-items:center;justify-content:center}
-.sh h2{font-size:10.5pt;font-weight:800;color:var(--accent);line-height:1.1}
-.sh small{display:block;font-size:7.8pt;color:var(--mute);font-weight:400}
-.chip{margin-left:auto;display:flex;align-items:center;gap:1.4mm;font-size:8pt;font-weight:700;white-space:nowrap}
-.chip i{width:4.2mm;height:4.2mm;border-radius:50%;display:inline-block;box-shadow:inset 0 -1px 2px rgba(0,0,0,.25)}
+.ref{font-size:6.5pt;color:#9aa5a8;font-weight:400;white-space:nowrap}
+.head{border-bottom:2px solid var(--accent);padding-bottom:2.6mm}
+.tk{font-size:9.5pt;font-weight:800;color:var(--accent2);letter-spacing:1.2px}
+.head h1{font-size:23pt;font-weight:800;line-height:1.15;margin-top:.6mm}
+.head p{font-size:10.8pt;color:var(--mute);margin-top:.6mm}
+.step{border:1.5px solid var(--line);border-radius:3mm;background:#fff;padding:4.2mm 4.6mm}
+.sh{display:flex;align-items:center;gap:3mm;margin-bottom:3.4mm}
+.num{flex:none;width:9.5mm;height:9.5mm;border-radius:50%;background:var(--accent);color:#fff;font-weight:800;font-size:13pt;display:flex;align-items:center;justify-content:center}
+.sh h2{font-size:15.5pt;font-weight:800;color:var(--accent);line-height:1.1}
+.sh small{display:block;font-size:10.5pt;color:var(--mute);font-weight:400}
+.chip{margin-left:auto;display:flex;align-items:center;gap:1.8mm;font-size:11pt;font-weight:800;white-space:nowrap}
+.chip i{width:6mm;height:6mm;border-radius:50%;display:inline-block;box-shadow:inset 0 -1px 2px rgba(0,0,0,.25)}
 .g{background:var(--green)}.y{background:var(--amber)}.r{background:var(--red)}
-ul{padding-left:4.2mm;font-size:8.7pt}
-li{margin-bottom:.8mm}
-table{width:100%;border-collapse:collapse;font-size:8.4pt;margin:1mm 0}
-th{background:#f1ede1;text-align:left;font-weight:700;padding:.9mm 1.6mm;border:1px solid var(--line)}
-td{padding:.8mm 1.6mm;border:1px solid var(--line);vertical-align:top}
-td.n,th.n{text-align:right;white-space:nowrap}
-.verdict{font-size:8.6pt;margin-top:1.2mm;padding:1.2mm 2mm;background:#faf6ea;border-radius:1.6mm}
-.verdict b{color:var(--accent)}
-.note{font-size:7.6pt;color:var(--mute)}
-.two{display:grid;grid-template-columns:1fr 1fr;gap:3mm}
-.sum{display:grid;grid-template-columns:repeat(5,1fr);gap:2mm}
-.sum div{border:1px solid var(--line);border-radius:2mm;padding:1.8mm 2mm;background:#fff;font-size:8pt}
-.sum b{display:flex;align-items:center;gap:1.4mm;font-size:8.6pt;color:var(--accent);margin-bottom:.6mm}
-.sum i{width:3.6mm;height:3.6mm;border-radius:50%;display:inline-block}
-.foot{margin-top:auto;border-top:1px solid var(--line);padding-top:1.6mm;font-size:7pt;color:var(--mute);line-height:1.4}
+.tiles{display:grid;gap:2.6mm}
+.t3{grid-template-columns:repeat(3,1fr)}
+.t4{grid-template-columns:repeat(4,1fr)}
+.tile{background:#faf6ea;border-radius:2.8mm;padding:3.4mm 2.8mm;text-align:center}
+.tile b{display:block;font-size:21pt;font-weight:800;line-height:1.1;color:var(--accent)}
+.tile span{display:block;font-size:10.5pt;color:var(--mute);line-height:1.25;margin-top:.4mm}
+.s4 .tile b{font-size:15.5pt;white-space:nowrap}
+.tile.up b{color:var(--green)}.tile.dn b{color:#b5820a}
+.tile.now{background:var(--accent)}.tile.now b,.tile.now span{color:#fff}
+.say{margin-top:3mm;font-size:12pt;font-weight:700;background:#fdeede;border-radius:2.6mm;padding:2.6mm 3.6mm}
+.line{font-size:11pt;margin-top:2.4mm;color:var(--ink)}
+.line b{font-weight:700}
+.note{font-size:9.4pt;color:var(--mute);margin-top:1.8mm}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:4mm}
+.mini h3{font-size:12pt;font-weight:800;color:var(--accent);margin-bottom:1mm}
+.mini ul{padding-left:4.6mm;font-size:11pt}
+.mini li{margin-bottom:1.6mm}
+.sum{display:grid;grid-template-columns:repeat(5,1fr);gap:2.6mm}
+.sum div{border:1.5px solid var(--line);border-radius:3mm;padding:4mm 2.6mm;background:#fff;font-size:10.5pt;text-align:center}
+.sum i{display:block;width:8mm;height:8mm;border-radius:50%;margin:0 auto 1.8mm}
+.sum b{display:block;font-size:12pt;color:var(--accent)}
+.foot{margin-top:auto;border-top:1px solid var(--line);padding-top:2mm;font-size:8pt;color:var(--mute);line-height:1.45}
 .foot b{color:var(--ink)}
 </style>
 </head>
@@ -51,118 +58,102 @@ td.n,th.n{text-align:right;white-space:nowrap}
 <!-- ============ หน้า 1 ============ -->
 <main class="page">
 <header class="head">
-  <div><div class="tk">TEMPLATE วิเคราะห์หุ้น 5 ขั้น · ตัวอย่าง CPALL (ซีพี ออลล์)</div>
-  <h1>ธุรกิจนี้ดีไหม เหลือมูลค่าเท่าไร และถ้าผิดจะเสียแค่ไหน</h1></div>
-  <div class="asof">ข้อมูล ณ 31 ต.ค. 2569 · ราคาปิด 43.75 บาท (30 ต.ค. 2569)<br>กรอบ 5 ขั้นตามที่ผู้เรียนสรุปจากหนังสือของ Pearl &amp; Rosenbaum</div>
+  <div class="tk">TEMPLATE วิเคราะห์หุ้น 5 ขั้น · ตัวอย่าง CPALL (ซีพี ออลล์)</div>
+  <h1>ธุรกิจดีไหม · มูลค่าเท่าไร · ถ้าผิดเสียแค่ไหน</h1>
+  <p>ข้อมูล ณ 31 ต.ค. 2569 · ราคาปิด 43.75 บาท · เขียว = ดี · เหลือง = ระวัง (ความเห็นผู้จัดทำ)</p>
 </header>
 
 <section class="step">
-  <div class="sh"><div class="num">1</div><h2>วิเคราะห์จากล่างขึ้นบน<small>ดูตัวธุรกิจ ไม่เดาเศรษฐกิจหรือจังหวะตลาด</small></h2><div class="chip"><i class="g"></i>แข็งแรง</div></div>
-  <ul>
-    <li><b>ขายอะไร:</b> ร้านสะดวกซื้อ 7-Eleven 16,284 ร้าน (มิ.ย. 2569) ยอดขายเฉลี่ย 85,843 บาทต่อร้านต่อวัน ลูกค้า 959 คนต่อร้านต่อวัน ยอดต่อบิล ~90 บาท <span class="ref">[114,118,120]</span></li>
-    <li><b>ส่วนงาน (ปี 2568):</b> ร้านสะดวกซื้อ 46% ของยอดขาย แต่ 61% ของกำไร · ค้าส่ง ห้างค้าปลีก ศูนย์การค้า 48% ของยอดขาย 28% ของกำไร <span class="ref">[108]</span></li>
-    <li><b>ของที่ขาย:</b> อาหาร 77.5% ของใช้อื่น 22.5% · ขายผ่านออนไลน์/ส่งถึงบ้าน ~11% <span class="ref">[122]</span></li>
-    <li><b>ตัวขับเคลื่อน:</b> (1) จำนวนร้านเพิ่ม ~700 ร้านต่อปี <span class="ref">[116,147]</span> (2) ยอดขายสาขาเดิม โตแค่ +0.8% ไตรมาส 2/2569 <span class="ref">[119]</span> (3) อัตรากำไรขั้นต้นร้านสะดวกซื้อ 29.3% ทรงตัว <span class="ref">[112]</span></li>
-    <li><b>ข้อได้เปรียบ (ความเห็นผู้จัดทำ ไม่ใช่ข้อเท็จจริงจากงบ):</b> จำนวนร้านมาก ทำให้ซื้อของได้ถูก และเจ้าหนี้การค้ามากกว่าสินค้าคงเหลือ ร้านจึงใช้เงินซัพพลายเออร์หมุนเวียน (วงจรเงินสดติดลบ ~29 วัน) <span class="ref">[146]</span></li>
-  </ul>
-  <p class="verdict"><b>สรุปขั้น 1:</b> เป็นธุรกิจซื้อซ้ำทุกวัน ส่วนที่ทำกำไรหลักคือร้านสะดวกซื้อ สิ่งที่ต้องจับตาคือยอดขายสาขาเดิมที่โตช้า</p>
+  <div class="sh"><div class="num">1</div><h2>ดูตัวธุรกิจ<small>ขายอะไร ทำเงินอย่างไร (ไม่เดาเศรษฐกิจ)</small></h2><div class="chip"><i class="g"></i>แข็งแรง</div></div>
+  <div class="tiles t3">
+    <div class="tile"><b>16,284</b><span>ร้าน 7-Eleven <span class="ref">[114]</span></span></div>
+    <div class="tile"><b>85,843</b><span>บาท ยอดขายต่อร้านต่อวัน <span class="ref">[118]</span></span></div>
+    <div class="tile"><b>959</b><span>คน ลูกค้าต่อร้านต่อวัน <span class="ref">[120]</span></span></div>
+  </div>
+  <p class="line">ร้านสะดวกซื้อขายได้ <b>46%</b> แต่ทำกำไร <b>61%</b> <span class="ref">[108]</span> · เปิดร้านใหม่ ~700 ร้านต่อปี แต่ยอดขายสาขาเดิมโตแค่ <b>+0.8%</b> <span class="ref">[116,119]</span></p>
+  <p class="say">ธุรกิจซื้อซ้ำทุกวัน กำไรหลักมาจากร้านสะดวกซื้อ จับตายอดขายสาขาเดิม</p>
 </section>
 
 <section class="step">
-  <div class="sh"><div class="num">2</div><h2>ประเมินผลงานการเงิน<small>กำไรและเงินสดจริงไหม ประวัติเป็นอย่างไร</small></h2><div class="chip"><i class="g"></i>ดี</div></div>
-  <table>
-    <tr><th>รายการ (งบรวม)</th><th class="n">ปี 2568</th><th class="n">ปี 2567</th><th class="n">เปลี่ยน (คำนวณ)</th><th>ที่มา</th></tr>
-    <tr><td>รายได้จากการขายและบริการ (พันล้านบาท)</td><td class="n">990.7</td><td class="n">959.0</td><td class="n">+3.3%</td><td><span class="ref">[40]</span></td></tr>
-    <tr><td>กำไรจากการดำเนินงาน</td><td class="n">53.2</td><td class="n">50.7</td><td class="n">+5.0%</td><td><span class="ref">[46]</span></td></tr>
-    <tr><td>กำไรสุทธิ (ส่วนบริษัทใหญ่)</td><td class="n">28.2</td><td class="n">25.3</td><td class="n">+11.3%</td><td><span class="ref">[50,51]</span></td></tr>
-    <tr><td>กำไรต่อหุ้น EPS (บาท)</td><td class="n">3.10</td><td class="n">2.77</td><td class="n">+11.9%</td><td><span class="ref">[53]</span></td></tr>
-    <tr><td>เงินสดจากการดำเนินงาน (OCF)</td><td class="n">74.3</td><td class="n">76.2</td><td class="n">−2.5%</td><td><span class="ref">[79]</span></td></tr>
-    <tr><td>ซื้อสินทรัพย์ถาวร (capex)</td><td class="n">24.5</td><td class="n">22.9</td><td class="n">+6.8%</td><td><span class="ref">[86]</span></td></tr>
-    <tr><td>จ่ายชำระค่าเช่า</td><td class="n">17.3</td><td class="n">16.5</td><td class="n">+5.1%</td><td><span class="ref">[89]</span></td></tr>
-    <tr><td>ดอกเบี้ยจ่าย (รวมดอกเบี้ยค่าเช่า)</td><td class="n">14.9</td><td class="n">15.5</td><td class="n">−3.9%</td><td><span class="ref">[47]</span></td></tr>
-  </table>
-  <ul>
-    <li><b>อัตรากำไร:</b> กำไรขั้นต้น 22.7% (ปีก่อน 22.6%) · กำไรสุทธิ 2.8% ของรายได้ (คำนวณ) · กำไรจากการดำเนินงานครอบคลุมดอกเบี้ยจ่าย 3.6 เท่า (คำนวณ) <span class="ref">[43,50,40,46,47]</span></li>
-    <li><b>คุณภาพกำไร:</b> OCF เป็น 2.3 เท่าของกำไรสำหรับปี (คำนวณ) บางส่วนเพราะค่าเช่าถูกจัดไปอยู่หมวดจัดหาเงิน หลังหัก capex และค่าเช่าเหลือ ~32.5 พันล้าน <span class="ref">[83,100]</span></li>
-    <li><b>ผลล่าสุด:</b> กำไรสุทธิ 6 เดือนแรกปี 2569 เพิ่ม +16% (คำนวณ) <span class="ref">[73,74]</span> · ผู้สอบบัญชี KPMG ให้ความเห็นไม่มีเงื่อนไข (ปี 2568) <span class="ref">[142]</span></li>
-  </ul>
-  <p class="verdict"><b>สรุปขั้น 2:</b> กำไรโตเร็วกว่ารายได้ (+11% เทียบ +3%) เพราะต้นทุนขายและบริหารคุมได้ แต่เงินสดจากการดำเนินงานปีล่าสุดลดลงเล็กน้อย จึงอย่าอ่านว่าเงินสดโตตามกำไร</p>
+  <div class="sh"><div class="num">2</div><h2>ดูผลงานการเงิน<small>ปี 2568 เทียบปี 2567 (คำนวณ)</small></h2><div class="chip"><i class="g"></i>ดี</div></div>
+  <div class="tiles t4">
+    <div class="tile up"><b>+3.3%</b><span>รายได้ <span class="ref">[40]</span></span></div>
+    <div class="tile up"><b>+5.0%</b><span>กำไรจากดำเนินงาน <span class="ref">[46]</span></span></div>
+    <div class="tile up"><b>+11.3%</b><span>กำไรสุทธิ <span class="ref">[50,51]</span></span></div>
+    <div class="tile dn"><b>−2.5%</b><span>เงินสดจากธุรกิจ <span class="ref">[79]</span></span></div>
+  </div>
+  <p class="line">เงินสดจากธุรกิจ = <b>2.3 เท่า</b> ของกำไร <span class="ref">[83]</span> · หลังลงทุนและจ่ายค่าเช่าเหลือ <b>~32.5 พันล้านบาท</b> <span class="ref">[100]</span></p>
+  <p class="say">กำไรโตเร็วกว่ารายได้ แต่เงินสดจากธุรกิจลดเล็กน้อย อย่าอ่านว่าเงินสดโตตามกำไร</p>
 </section>
 
-<footer class="foot"><b>หน้า 1 จาก 2</b> · เลขใน [ ] คือเลขแถวใน <i>output/data.csv</i> · ตัวเลขที่ระบุ "คำนวณ" ผู้จัดทำคำนวณเองจากตัวเลขในงบ · สีไฟเป็นความเห็นของผู้จัดทำ</footer>
+<section class="step">
+  <div class="sh"><div class="num">3</div><h2>ดูมูลค่า<small>ธุรกิจนี้ควรมีมูลค่าเท่าไร (ไม่ใช่ราคาเท่าไร)</small></h2><div class="chip"><i class="y"></i>กลาง ๆ</div></div>
+  <div class="tiles t4">
+    <div class="tile now"><b>43.75</b><span>ราคาตอนนี้ · P/E 14.1 <span class="ref" style="color:#cfe0e4">[148]</span></span></div>
+    <div class="tile"><b>43.5</b><span>กรณีต่ำ (P/E 14.0) · ส่วนเผื่อ −1%</span></div>
+    <div class="tile"><b>52.9</b><span>กรณีกลาง (P/E 17.1) · ส่วนเผื่อ +17%</span></div>
+    <div class="tile"><b>62.4</b><span>กรณีสูง (P/E 20.1) · ส่วนเผื่อ +30%</span></div>
+  </div>
+  <p class="line">มูลค่า = กำไรต่อหุ้น <b>3.10</b> × P/E สิ้นปี 2568 (14.0) และสิ้นปี 2567 (20.1) <span class="ref">[53,154]</span> · ปันผล <b>3.8%</b> · กำไรต่อราคา <b>7.1%</b> (คำนวณ)</p>
+  <p class="note">เป็นสมมติฐานของผู้จัดทำ มี P/E ย้อนหลังแค่ 2 จุด · ยังไม่มี DCF · ยังไม่เทียบคู่แข่ง</p>
+  <p class="say">ราคาตอนนี้เท่า P/E ต่ำสุดที่เห็น ถ้ากลับค่ากลางมีส่วนเผื่อ ~17%</p>
+</section>
+
+<footer class="foot"><b>หน้า 1 จาก 2</b> · เลข [ ] คือแถวที่มาใน <i>output/data.csv</i> · "คำนวณ" = ผู้จัดทำคำนวณเองจากตัวเลขในงบ</footer>
 </main>
 
 <!-- ============ หน้า 2 ============ -->
 <main class="page">
 <section class="step">
-  <div class="sh"><div class="num">3</div><h2>ประเมินมูลค่า<small>ธุรกิจนี้ควรมีมูลค่าเท่าไร ไม่ใช่ราคาหุ้นเท่าไร</small></h2><div class="chip"><i class="y"></i>กลาง ๆ</div></div>
-  <table>
-    <tr><th>วิธี: P/E ย้อนหลังของหุ้นเองที่ราคาสิ้นปี</th><th class="n">ราคาสิ้นปี</th><th class="n">EPS</th><th class="n">P/E (คำนวณ)</th></tr>
-    <tr><td>สิ้นปี 2567 (30 ธ.ค. 2567)</td><td class="n">55.75</td><td class="n">2.77</td><td class="n">20.1 เท่า</td></tr>
-    <tr><td>สิ้นปี 2568 (30 ธ.ค. 2568)</td><td class="n">43.50</td><td class="n">3.10</td><td class="n">14.0 เท่า</td></tr>
-    <tr><td><b>ปัจจุบัน</b> (30 ต.ค. 2569 ใช้ EPS ปี 2568)</td><td class="n">43.75</td><td class="n">3.10</td><td class="n"><b>14.1 เท่า</b></td></tr>
-  </table>
-  <p class="note">ที่มา: ราคาจาก Yahoo Finance (แหล่งรอง ยังไม่ยืนยันกับ set.or.th) · EPS จากงบ <span class="ref">[148,154,53]</span> · มีข้อมูลย้อนหลังแค่ 2 จุด จึงเป็นภาพคร่าว ๆ เท่านั้น</p>
-  <table>
-    <tr><th>สถานการณ์ (<b>สมมติฐานของผู้จัดทำ</b> ใช้ EPS ปี 2568 = 3.10 คูณ P/E)</th><th class="n">P/E ที่สมมติ</th><th class="n">มูลค่าต่อหุ้น</th><th class="n">ส่วนเผื่อ vs ราคา 43.75</th></tr>
-    <tr><td>ต่ำ: P/E กลับไปเท่าสิ้นปี 2568</td><td class="n">14.0</td><td class="n">43.5</td><td class="n">−1%</td></tr>
-    <tr><td>กลาง: ค่าเฉลี่ยของ 2 จุดข้างบน</td><td class="n">17.1</td><td class="n">52.9</td><td class="n">+17%</td></tr>
-    <tr><td>สูง: P/E กลับไปเท่าสิ้นปี 2567</td><td class="n">20.1</td><td class="n">62.4</td><td class="n">+30%</td></tr>
-  </table>
-  <ul>
-    <li><b>เทียบกับของที่จับต้องได้:</b> ผลตอบแทนปันผล 3.8% (1.65 ÷ 43.75) · กำไรต่อราคา (earnings yield) 7.1% (3.10 ÷ 43.75) ทั้งคู่คำนวณ <span class="ref">[139,148,53]</span> · อัตราผลตอบแทนพันธบัตรหรือทางเลือกอื่น <b>[ยังไม่ได้ใส่]</b></li>
-    <li><b>ยังไม่ได้ทำ:</b> DCF และเทียบ P/E กับคู่แข่งในกลุ่มเดียวกัน (ไม่มีข้อมูลในแหล่งที่อนุญาต) · P/B ไม่ใช้ เพราะมูลค่าตามบัญชีต่อหุ้นของ Yahoo (14.73) ไม่ตรงกับที่คำนวณจากงบ (~15.50)</li>
-  </ul>
-  <p class="verdict"><b>สรุปขั้น 3:</b> ราคาปัจจุบันเท่ากับ P/E ต่ำสุดที่เห็นในข้อมูล ถ้าเชื่อว่า P/E กลับไปค่ากลางจะมีส่วนเผื่อ ~17% แต่ P/E ที่ลดลงอาจสะท้อนว่าตลาดมองการเติบโตต่ำลง ไม่ใช่แค่ราคาถูก</p>
-</section>
-
-<section class="step">
-  <div class="sh"><div class="num">4</div><h2>เหตุการณ์พิเศษของบริษัท<small>มีอะไรที่อาจเปลี่ยนมูลค่าหรือไม่</small></h2><div class="chip"><i class="y"></i>มีเรื่องให้ติดตาม</div></div>
-  <table>
-    <tr><th style="width:27%">เรื่อง</th><th>ที่พบในเอกสาร</th></tr>
-    <tr><td>ซื้อหุ้นคืน</td><td>ซื้อคืน 3.36 พันล้านบาท ในปี 2568 ประมาณ 71.6 ล้านหุ้น (0.80%) ปีก่อนไม่มี · จำนวนหุ้นในงบกับ 56-1 ต่างกันเล็กน้อย <span class="ref">[97,99]</span></td></tr>
-    <tr><td>ปันผล</td><td>นโยบายจ่าย ~50% ของกำไรสุทธิงบเดี่ยว · ปันผลต่อหุ้น 0.60 → 0.75 → 1.00 → 1.35 → 1.65 บาท (ปีผลงาน 2564–2568) · อัตราจ่ายที่บริษัทรายงาน 58.85% คิดจากงบเดี่ยว ถ้าเทียบกำไรงบรวมได้ ~52% <span class="ref">[138,139,141]</span></td></tr>
-    <tr><td>หนี้และทุน</td><td>หุ้นกู้ครบกำหนดใน 12 เดือน 24.8 พันล้านบาท (มิ.ย. 2569) ต้องออกใหม่หรือใช้เงินสด · หุ้นกู้ด้อยสิทธิไม่มีกำหนดไถ่ถอน 9.96 พันล้านบาท บันทึกอยู่ในส่วนผู้ถือหุ้น <span class="ref">[16,39]</span></td></tr>
-    <tr><td>ขยายและปิดสาขา</td><td>แผนเปิดร้านใหม่ในไทย ~700 ร้านต่อปี งบลงทุน 12,000–13,600 ล้านบาท · ร้านกัมพูชาลดจาก 125 เหลือ 39 ร้าน (เหตุการณ์ชายแดน ตามคำพูดผู้บริหาร ซึ่งเป็นข้อมูลชั้นรอง) <span class="ref">[121,147]</span></td></tr>
-    <tr><td>ผู้ถือหุ้นใหญ่และบริษัทในเครือ</td><td>กลุ่ม CPG ถือ 35.92% · CPALL ถือ CP Axtra รวม 59.93% (ทางตรง 34.92% + ผ่านบริษัทย่อย 25.01%) · ซื้อสินค้าและบริการจากบริษัทในเครือ 98.2 พันล้านบาทต่อปี <span class="ref">[127,129,123]</span></td></tr>
-    <tr><td>ควบรวม / แยกกิจการ</td><td>ไม่พบในตารางข้อเท็จจริงที่ใช้ <b>[ยังไม่ได้ค้นครบทุกเอกสาร]</b></td></tr>
-  </table>
-  <p class="verdict"><b>สรุปขั้น 4:</b> เหตุการณ์ที่หนุนผู้ถือหุ้นคือปันผลที่เพิ่มขึ้นและการซื้อหุ้นคืน ส่วนที่ต้องติดตามคือรายการกับบริษัทในเครือที่ใหญ่ และการหดตัวที่กัมพูชา</p>
-</section>
-
-<section class="step">
-  <div class="sh"><div class="num">5</div><h2>บริหารความเสี่ยง<small>ถ้าผิด จะเสียเท่าไร และมีส่วนเผื่อไหม</small></h2><div class="chip"><i class="y"></i>ระวัง</div></div>
-  <div class="two">
-    <ul>
-      <li><b>ความเสี่ยงหลัก:</b> (1) หนี้ที่มีดอกเบี้ย ~3.2 แสนล้านบาท หนี้สุทธิต่อทุน 0.82 เท่า เพดานในสัญญา 2 เท่า <span class="ref">[22,145]</span> (2) ค่าความนิยม 3.6 แสนล้านบาท = 37% ของสินทรัพย์รวม (คำนวณ) ผู้สอบบัญชีระบุเป็นเรื่องสำคัญ <span class="ref">[29,9,143]</span> (3) ยอดขายสาขาเดิมโตช้า <span class="ref">[119]</span></li>
-      <li><b>ส่วนเผื่อความผิดพลาด:</b> −1% / +17% / +30% (ต่ำ / กลาง / สูง จากขั้น 3) ที่กรณีต่ำแทบไม่มีส่วนเผื่อ</li>
-    </ul>
-    <ul>
-      <li><b>อะไรทำให้คิดผิด (ต้องกลับมาทบทวน):</b> ยอดขายสาขาเดิมติดลบต่อเนื่อง · อัตรากำไรขั้นต้นร้านสะดวกซื้อต่ำกว่า 29% · หนี้สุทธิต่อทุนเข้าใกล้ 2 เท่า · ตัดค่าความนิยมก้อนใหญ่</li>
-      <li><b>ติดตามไตรมาสหน้า:</b> ยอดขายสาขาเดิม · OCF · จำนวนร้านกัมพูชา · แผนหุ้นกู้ที่ครบกำหนด</li>
-      <li><b>ขนาดเงินที่ยอมเสียได้:</b> ผู้เรียนกรอกเอง ไม่ใส่ใน repo Public</li>
-    </ul>
+  <div class="sh"><div class="num">4</div><h2>ดูเหตุการณ์พิเศษ<small>มีอะไรที่อาจเปลี่ยนมูลค่าหรือไม่</small></h2><div class="chip"><i class="y"></i>มีเรื่องให้ติดตาม</div></div>
+  <div class="tiles t4 s4">
+    <div class="tile up"><b>3.36 พันล้าน</b><span>ซื้อหุ้นคืน ปี 2568 (ปีก่อน 0) <span class="ref">[97]</span></span></div>
+    <div class="tile up"><b>0.60 → 1.65</b><span>ปันผลต่อหุ้น (บาท) ใน 5 ปี <span class="ref">[139]</span></span></div>
+    <div class="tile dn"><b>24.8 พันล้าน</b><span>หุ้นกู้ครบกำหนดใน 1 ปี <span class="ref">[16]</span></span></div>
+    <div class="tile dn"><b>125 → 39</b><span>ร้านกัมพูชา ใน 9 เดือน <span class="ref">[121]</span></span></div>
   </div>
-  <p class="verdict"><b>สรุปขั้น 5:</b> ธุรกิจแข็งแรง แต่ส่วนเผื่อความผิดพลาดขึ้นกับว่า P/E จะกลับไปค่ากลางหรือไม่ ซึ่งเป็นสมมติฐาน ไม่ใช่ข้อเท็จจริง</p>
+  <p class="line">กลุ่ม CPG ถือหุ้น <b>35.92%</b> · ซื้อสินค้าจากบริษัทในเครือ <b>98 พันล้านบาทต่อปี</b> <span class="ref">[127,123]</span></p>
+  <p class="line">ควบรวม / แยกกิจการ: ไม่พบในข้อมูลที่ใช้ <b>[ยังไม่ได้ค้นครบทุกเอกสาร]</b></p>
+  <p class="say">ปันผลและซื้อหุ้นคืนหนุนผู้ถือหุ้น ส่วนที่ต้องติดตามคือรายการกับบริษัทในเครือและกัมพูชา</p>
+</section>
+
+<section class="step">
+  <div class="sh"><div class="num">5</div><h2>ดูความเสี่ยง<small>ถ้าผิด จะเสียเท่าไร และมีส่วนเผื่อไหม</small></h2><div class="chip"><i class="y"></i>ระวัง</div></div>
+  <div class="two">
+    <div class="mini"><h3>ความเสี่ยงหลัก</h3>
+      <ul>
+        <li>หนี้มีดอกเบี้ย <b>3.2 แสนล้าน</b> (หนี้สุทธิต่อทุน 0.82 เท่า เพดาน 2) <span class="ref">[22,145]</span></li>
+        <li>ค่าความนิยม = <b>37%</b> ของสินทรัพย์ ถ้าตัดมูลค่า กำไรลด <span class="ref">[29,9,143]</span></li>
+        <li>ยอดขายสาขาเดิมโตช้า <b>+0.8%</b> <span class="ref">[119]</span></li>
+      </ul></div>
+    <div class="mini"><h3>ถ้าเกิดแบบนี้ ต้องกลับมาทบทวน</h3>
+      <ul>
+        <li>ยอดขายสาขาเดิมติดลบต่อเนื่อง</li>
+        <li>กำไรขั้นต้นร้านสะดวกซื้อต่ำกว่า 29%</li>
+        <li>หนี้สุทธิต่อทุนเข้าใกล้ 2 เท่า</li>
+      </ul></div>
+  </div>
+  <p class="line">ส่วนเผื่อความผิดพลาด: <b>−1% / +17% / +30%</b> (ต่ำ / กลาง / สูง) · ขนาดเงินลงทุน: ผู้เรียนกรอกเอง ไม่ใส่ใน repo Public</p>
+  <p class="say">ธุรกิจแข็งแรง แต่ส่วนเผื่อขึ้นกับสมมติฐานว่า P/E จะกลับค่ากลาง ซึ่งยังไม่แน่</p>
 </section>
 
 <section>
   <div class="sum">
-    <div><b><i class="g"></i>1 ธุรกิจ</b>ซื้อซ้ำทุกวัน ร้านสะดวกซื้อทำกำไรหลัก</div>
-    <div><b><i class="g"></i>2 การเงิน</b>กำไรโต +11% OCF ลดเล็กน้อย</div>
-    <div><b><i class="y"></i>3 มูลค่า</b>P/E 14.1 เท่า เท่ากับต่ำสุดที่เห็น</div>
-    <div><b><i class="y"></i>4 เหตุการณ์</b>ปันผล/ซื้อหุ้นคืนหนุน ติดตามกัมพูชา</div>
-    <div><b><i class="y"></i>5 ความเสี่ยง</b>หนี้สูง ส่วนเผื่อขึ้นกับสมมติฐาน</div>
+    <div><i class="g"></i><b>1 ธุรกิจ</b>ซื้อซ้ำทุกวัน</div>
+    <div><i class="g"></i><b>2 การเงิน</b>กำไรโต +11%</div>
+    <div><i class="y"></i><b>3 มูลค่า</b>P/E ต่ำสุดที่เห็น</div>
+    <div><i class="y"></i><b>4 เหตุการณ์</b>ปันผลหนุน ติดตามกัมพูชา</div>
+    <div><i class="y"></i><b>5 ความเสี่ยง</b>หนี้สูง ส่วนเผื่อน้อย</div>
   </div>
 </section>
 
-<footer class="foot"><b>หน้า 2 จาก 2</b> · <b>ที่มา:</b> งบการเงินปี 2568 (KPMG ไม่มีเงื่อนไข) · งบไตรมาส 2/2569 (สอบทาน) · MD&amp;A · แบบ 56-1 ปี 2568 · ราคาจาก Yahoo Finance (ยังไม่ยืนยันกับ set.or.th) · คำพูดผู้บริหารจากการประชุมนักวิเคราะห์ (ชั้นรอง) · <b>ข้อจำกัด:</b> เอกสารนี้ไม่ได้ตัดสินว่าควรซื้อหรือขาย เป็นสรุปเพื่อการเรียนรู้ ไม่ใช่คำแนะนำการลงทุน ผู้จัดทำไม่ใช่ผู้ให้คำแนะนำที่ได้รับใบอนุญาต</footer>
+<footer class="foot"><b>หน้า 2 จาก 2</b> · <b>ที่มา:</b> งบการเงินปี 2568 (KPMG ไม่มีเงื่อนไข) · งบไตรมาส 2/2569 (สอบทาน) · MD&amp;A · แบบ 56-1 · ราคาจาก Yahoo Finance (ยังไม่ยืนยันกับ set.or.th) · กรอบ 5 ขั้นตามที่ผู้เรียนสรุปจากหนังสือของ Pearl &amp; Rosenbaum · <b>ไม่ได้ตัดสินว่าควรซื้อหรือขาย</b> เป็นสรุปเพื่อการเรียนรู้ ไม่ใช่คำแนะนำการลงทุน</footer>
 </main>
 
 <script>
 /* ใช้ตอนถ่ายภาพตัวอย่าง: เปิดด้วย #shot1 หรือ #shot2 เพื่อแสดงหน้าเดียวชิดขอบ */
 (function(){var m=/^#shot(\d)$/.exec(location.hash);if(!m)return;
-var s=document.createElement('style');s.textContent='.page{margin:0!important;box-shadow:none!important}body{background:#fff}.page:not(:nth-of-type('+m[1]+')){display:none}';
+var s=document.createElement('style');s.textContent='.page{margin:0!important;box-shadow:none!important;width:210mm!important;height:297mm!important;padding:11mm 13mm 8mm!important}body{background:#fff}.page:not(:nth-of-type('+m[1]+')){display:none}';
 document.head.appendChild(s);})();
 </script>
 </body>
