@@ -59,6 +59,8 @@ body{background:var(--bg);font-family:"Sarabun","Noto Sans Thai","Leelawadee UI"
 .tbl .n{text-align:right;white-space:nowrap}
 .tbl.sc td{font-size:10.5pt;padding:1.6mm 2mm}
 .tbl td.dn{color:var(--red);font-weight:800}
+.tbl td.up{color:var(--green);font-weight:800}
+.tbl.sc2 td{font-size:9.6pt}
 .chart{margin:1mm 0 2mm}
 .tbl.pr{font-size:9pt}.tbl.pr th{padding:1mm 1.4mm}.tbl.pr td{padding:1.1mm 1.4mm}
 .tbl tr.hl td{background:#fdeede;font-weight:700}.tbl tr.md td{background:#f1ede1;color:var(--mute)}
@@ -73,6 +75,9 @@ body{background:var(--bg);font-family:"Sarabun","Noto Sans Thai","Leelawadee UI"
 .l1::before{background:var(--accent2)}.l2::before{background:var(--accent)}.l3::before{background:#8a9598}
 .sub2{font-size:10.5pt;font-weight:800;color:var(--accent2);margin:3mm 0 1.4mm}
 .d.g{background:var(--green)}.d.y{background:var(--amber)}.d.r{background:var(--red)}
+.tight .tbl td{padding:.6mm 2mm;font-size:9.2pt}.tight .tbl th{padding:.7mm 2mm;font-size:9pt}.tight .tbl.sc td{font-size:9.6pt;padding:.7mm 2mm}
+.tight .sub{margin:2mm 0 1mm;font-size:10.5pt}.tight .note{font-size:8.4pt;margin-top:1mm}.tight .line{font-size:10pt;margin-top:1.4mm}
+.tight .say{font-size:10.5pt;margin-top:2mm;padding:2mm 3mm}
 .foot{margin-top:auto;border-top:1px solid var(--line);padding-top:2mm;font-size:8pt;color:var(--mute);line-height:1.45}
 .foot b{color:var(--ink)}
 </style>
@@ -92,7 +97,7 @@ body{background:var(--bg);font-family:"Sarabun","Noto Sans Thai","Leelawadee UI"
   <div class="sum">
     <div><i class="g"></i><b>1 ธุรกิจ</b>ซื้อซ้ำทุกวัน</div>
     <div><i class="g"></i><b>2 การเงิน</b>กำไรโต +11% เพื่อนส่วนใหญ่ลด</div>
-    <div><i class="y"></i><b>3 มูลค่า</b>P/E ต่ำสุด 5 ปี แต่ DCF ต่ำกว่าราคา</div>
+    <div><i class="y"></i><b>3 มูลค่า</b>P/E ต่ำสุด 5 ปี แต่ DCF ฐานต่ำกว่าราคา</div>
     <div><i class="y"></i><b>4 เหตุการณ์</b>ปันผลหนุน ติดตามกัมพูชา</div>
     <div><i class="y"></i><b>5 ความเสี่ยง</b>หนี้สูง ราคาพึ่งการโต</div>
   </div>
@@ -208,12 +213,12 @@ body{background:var(--bg);font-family:"Sarabun","Noto Sans Thai","Leelawadee UI"
 </main>
 
 <!-- ============ หน้า 4 ============ -->
-<main class="page">
+<main class="page tight">
 <section class="step">
   <div class="sh"><div class="num">3</div><h2>ดูมูลค่า (2/2) · DCF<small>ประเมินจากเงินสดที่ธุรกิจจะเหลือให้ผู้ถือหุ้น · 3 กรณี</small></h2><div class="chip"><i class="y"></i>ราคาพึ่งการเติบโต</div></div>
 
   <div class="sub">DCF คิดจากเงินสดที่เหลือถึงผู้ถือหุ้น (FCFE)</div>
-  <p class="line"><b>DCF</b> = ประมาณเงินสดที่ธุรกิจจะเหลือให้ผู้ถือหุ้นในอนาคต แล้วคิดกลับมาเป็นมูลค่าวันนี้ (อนาคตมีค่าน้อยกว่าวันนี้ จึงต้องหักด้วย "อัตราคิดลด")</p>
+  <p class="line"><b>DCF</b> = ประมาณเงินสดที่จะเหลือให้ผู้ถือหุ้นในอนาคต แล้วคิดกลับเป็นมูลค่าวันนี้ด้วย "อัตราคิดลด"</p>
   <table class="tbl">
     <tr><th>เงินสดที่เหลือถึงผู้ถือหุ้น ปี 2568 (พันล้านบาท)</th><th class="n">จำนวน</th><th>ที่มา</th></tr>
     <tr><td>เงินสดจากธุรกิจ</td><td class="n">+74.26</td><td><span class="ref">[79]</span></td></tr>
@@ -226,14 +231,32 @@ body{background:var(--bg);font-family:"Sarabun","Noto Sans Thai","Leelawadee UI"
   <p class="note">ตัวเลขนี้ใกล้เคียงปันผลที่จ่ายผู้ถือหุ้นจริง 12.13 พันล้านบาท <span class="ref">[95]</span> หมายถึงบริษัทจ่ายปันผลเกือบเท่าเงินสดที่เหลือ</p>
 
   <table class="tbl sc">
-    <tr><th>กรณี</th><th class="n">เงินสดโตปีละ<br>(5 ปีแรก)</th><th class="n">โตต่อเนื่อง<br>หลังปีที่ 5</th><th class="n">อัตรา<br>คิดลด</th><th class="n">มูลค่า<br>ต่อหุ้น</th><th class="n">เทียบราคา<br>43.75</th></tr>
-    <tr><td><b>Worst</b> แย่สุด</td><td class="n">3%</td><td class="n">2%</td><td class="n">10%</td><td class="n"><b>18.0 บาท</b></td><td class="n dn">−59%</td></tr>
-    <tr><td><b>Base</b> ฐาน</td><td class="n">8%</td><td class="n">3%</td><td class="n">9%</td><td class="n"><b>28.8 บาท</b></td><td class="n dn">−34%</td></tr>
-    <tr><td><b>Best</b> ดีสุด</td><td class="n">12%</td><td class="n">3.5%</td><td class="n">8.5%</td><td class="n"><b>40.3 บาท</b></td><td class="n dn">−8%</td></tr>
+    <tr><th>กรณี</th><th class="n">เงินสดโตปีละ<br>(5 ปีแรก)</th><th class="n">โตต่อเนื่อง<br>หลังปีที่ 5</th><th class="n">อัตราคิดลด<br>(ต้นทุนส่วนผู้ถือหุ้น)</th><th class="n">มูลค่า<br>ต่อหุ้น</th><th class="n">เทียบราคา<br>43.75</th></tr>
+    <tr><td><b>Worst</b> แย่สุด</td><td class="n">3%</td><td class="n">2%</td><td class="n">9.6%</td><td class="n"><b>19.0 บาท</b></td><td class="n dn">−57%</td></tr>
+    <tr><td><b>Base</b> ฐาน</td><td class="n">8%</td><td class="n">3%</td><td class="n">8.2%</td><td class="n"><b>33.3 บาท</b></td><td class="n dn">−24%</td></tr>
+    <tr><td><b>Best</b> ดีสุด</td><td class="n">12%</td><td class="n">3.5%</td><td class="n">7.7%</td><td class="n"><b>48.2 บาท</b></td><td class="n up">+10%</td></tr>
   </table>
-  <p class="line"><b>คิดกลับด้าน:</b> ราคา 43.75 บาท ต้องการให้เงินสดที่เหลือโต <b>~18% ต่อปี นาน 5 ปี</b> (ที่อัตราคิดลด 9% โตต่อเนื่อง 3%) <span class="ref">[D5]</span> ซึ่งสูงกว่ากำไรสุทธิที่โต +11% ปีล่าสุด</p>
-  <p class="note"><b>ข้อสมมติทั้งหมดในตารางด้านบนเป็นของผู้จัดทำ ไม่ใช่ข้อเท็จจริง</b> · อัตราคิดลดยังไม่ได้คำนวณจากผลตอบแทนพันธบัตร (ไม่มีข้อมูล) · เงินลงทุนปี 2568 รวมการขยายร้าน ~700 ร้านต่อปี แยกส่วนที่เป็นการบำรุงรักษาไม่ได้ จึงอาจทำให้ FCFE ต่ำกว่าที่ธุรกิจเดิมทำได้จริง <b>[ยังไม่ยืนยัน]</b> · ไม่ได้สมมติการกู้เพิ่มหรือชำระหนี้</p>
-  <p class="say">DCF บอก 18.0–40.3 บาท ต่ำกว่าราคาทุกกรณี (สูตรอยู่ใน [D4]) ขณะที่ P/E ในหน้า 3 ให้ผลสูงกว่า ราคาปัจจุบันจึงต้องพึ่งการเติบโตของเงินสดในอนาคต และราคาต่ำอาจเป็นเพราะธุรกิจแย่ลงจริง ไม่ใช่แค่ถูก</p>
+  <p class="line"><b>คิดกลับด้าน:</b> ราคา 43.75 บาท ต้องการให้เงินสดที่เหลือโต <b>~15% ต่อปี นาน 5 ปี</b> (ที่อัตราคิดลด 8.2% โตต่อเนื่อง 3%) <span class="ref">[D5]</span> ซึ่งสูงกว่ากำไรสุทธิที่โต +11% ปีล่าสุด</p>
+  <div class="sub">ที่มาของอัตราคิดลด: ต้นทุนส่วนของผู้ถือหุ้น (CAPM = Rf + β × ERP)</div>
+  <table class="tbl sc2">
+    <tr><th>ตัวแปร</th><th class="n">กรณีดีสุด</th><th class="n">กรณีฐาน</th><th class="n">กรณีแย่สุด</th><th>หมายเหตุ</th></tr>
+    <tr><td>Risk-free (พันธบัตรรัฐบาลไทย 10 ปี)</td><td class="n">2.0%</td><td class="n">2.15%</td><td class="n">2.15%</td><td>ช่วง 2.0–2.15%</td></tr>
+    <tr><td>β ของ CPALL (ความผันผวนเทียบตลาด)</td><td class="n">0.81</td><td class="n">0.81</td><td class="n">0.88</td><td>SET 0.81 · ไม่ใช้ 0.38 ของ Yahoo (ต่ำเกินจริง)</td></tr>
+    <tr><td>ERP (ส่วนชดเชยความเสี่ยงตลาดหุ้นไทย)</td><td class="n">7.0%</td><td class="n">7.5%</td><td class="n">8.5%</td><td>ช่วง 7.0–8.5%</td></tr>
+    <tr><td><b>ต้นทุนส่วนของผู้ถือหุ้น</b> (อัตราคิดลด)</td><td class="n"><b>7.7%</b></td><td class="n"><b>8.2%</b></td><td class="n"><b>9.6%</b></td><td><span class="ref">[R1]</span> คำนวณ</td></tr>
+  </table>
+  <p class="note">ใช้ต้นทุนส่วนของผู้ถือหุ้นไม่ใช่ WACC (6.0–7.3% ในข้อมูลที่ได้มา) เพราะ DCF นี้คิดจากเงินสดหลังหักดอกเบี้ยแล้ว ถ้าใช้ WACC จะนับประโยชน์จากหนี้ซ้ำ มูลค่ากรณีฐานจะขึ้นเป็น ~50 บาท · ค่า Rf β ERP มาจากสรุปของ AI อื่นที่ผู้เรียนให้ (อ้างว่ามาจาก ThaiBMA และ SET) <b>[ยังไม่ยืนยันกับต้นทาง]</b> และค่า β 0.88 ไม่ทราบแหล่ง</p>
+
+  <div class="sub">ความอ่อนไหวต่ออัตราคิดลด (มูลค่าต่อหุ้น บาท)</div>
+  <table class="tbl sc">
+    <tr><th>อัตราคิดลด</th><th class="n">เงินสดโต 3%<br>(แย่สุด)</th><th class="n">เงินสดโต 8%<br>(ฐาน)</th><th class="n">เงินสดโต 12%<br>(ดีสุด)</th></tr>
+    <tr><td>9.6%</td><td class="n"><b>19.0</b></td><td class="n">26.1</td><td class="n">32.8</td></tr>
+    <tr><td>8.2%</td><td class="n">23.3</td><td class="n"><b>33.3</b></td><td class="n">43.0</td></tr>
+    <tr><td>7.7%</td><td class="n">25.3</td><td class="n">36.9</td><td class="n"><b>48.2</b></td></tr>
+  </table>
+  <p class="note">ตัวหนา = จับคู่ตามกรณีในตารางข้างบน · มูลค่าที่สูงกว่าราคา 43.75 บาทมี 1 ช่อง (กรณีดีสุดที่ 7.7%) และ 43.0 ใกล้เคียงราคา · สูตรอยู่ใน <span class="ref">[D4]</span></p>
+  <p class="note"><b>ข้อสมมติทั้งหมดในตารางด้านบน (อัตราโตของเงินสด อัตราคิดลดที่เลือกคู่กับแต่ละกรณี) เป็นของผู้จัดทำ ไม่ใช่ข้อเท็จจริง</b> · เงินลงทุนปี 2568 รวมการขยายร้าน ~700 ร้านต่อปี แยกส่วนที่เป็นการบำรุงรักษาไม่ได้ จึงอาจทำให้ FCFE ต่ำกว่าที่ธุรกิจเดิมทำได้จริง <b>[ยังไม่ยืนยัน]</b> · ไม่ได้สมมติการกู้เพิ่มหรือชำระหนี้</p>
+  <p class="say">DCF กรณีฐานได้ 33.3 บาท ต่ำกว่าราคา ~24% มีเพียงกรณีดีสุด (48.2 บาท) ที่สูงกว่าราคา (สูตรอยู่ใน [D4]) ขณะที่ P/E ในหน้า 3 ให้ผลสูงกว่า ราคาปัจจุบันจึงต้องพึ่งการเติบโตของเงินสดในอนาคต และราคาต่ำอาจเป็นเพราะธุรกิจแย่ลงจริง ไม่ใช่แค่ถูก</p>
 </section>
 
 <footer class="foot"><b>หน้า 4 จาก 5</b> · วิธีอ่านเลขอ้างอิงและหน่วยดูหน้า 1</footer>
@@ -281,8 +304,8 @@ body{background:var(--bg);font-family:"Sarabun","Noto Sans Thai","Leelawadee UI"
         <li>หนี้สุทธิต่อทุนเข้าใกล้ 2 เท่า</li>
       </ul></div>
   </div>
-  <p class="line">ส่วนเผื่อ (เทียบราคา): P/E <b>−1% / +17% / +30%</b> · DCF <b>−59% / −34% / −8%</b> (แย่สุด / ฐาน / ดีสุด) · ขนาดเงินลงทุน: ผู้เรียนกรอกเอง ไม่ใส่ใน repo Public</p>
-  <p class="say">ธุรกิจแข็งแรง แต่ราคาปัจจุบันพึ่งการเติบโตของเงินสด DCF ต่ำกว่าราคาทุกกรณี ส่วนเผื่อน้อย</p>
+  <p class="line">ส่วนเผื่อ (เทียบราคา): P/E <b>−1% / +17% / +30%</b> · DCF <b>−57% / −24% / +10%</b> (แย่สุด / ฐาน / ดีสุด) · ขนาดเงินลงทุน: ผู้เรียนกรอกเอง ไม่ใส่ใน repo Public</p>
+  <p class="say">ธุรกิจแข็งแรง แต่ราคาปัจจุบันพึ่งการเติบโตของเงินสด DCF กรณีฐานต่ำกว่าราคา ส่วนเผื่อน้อย</p>
 </section>
 
 
