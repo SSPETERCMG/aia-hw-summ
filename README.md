@@ -37,6 +37,10 @@
 
 ---
 
+## Dashboard ของ CPALL
+
+ผลวิเคราะห์ทั้งหมดรวมเป็น dashboard หน้าเดียวบน claude.ai ตามโครง Verdict · ตัวเลขหลัก · Bull · Risks · Unknowns · คำถามต่อไป (Artifact ส่วนตัว เปิดได้เฉพาะเจ้าของ ถ้าจะให้ผู้สอนดูต้องแชร์ลิงก์จากเมนู Share) ข้อมูล 11 ชุดที่ dashboard ใช้ อยู่ที่ [`output/dashboard-data/`](output/dashboard-data/) เป็นไฟล์ CSV และทุกตัวเลขมีที่มาใน [`output/data.csv`](output/data.csv) (GitHub แสดงตัว dashboard ไม่ได้ แสดงได้เฉพาะข้อมูลดิบ)
+
 ## ไฟล์ใน repo นี้
 
 | ไฟล์ | ใส่อะไร |
